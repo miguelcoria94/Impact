@@ -13,9 +13,46 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <title>Impact</title>
+    <title>impact</title>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">impact!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="{{url_for('index.index')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('index.about')}}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Create Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock%}
+    </div>
 </body>
 </html>
