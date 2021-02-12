@@ -30,3 +30,19 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         
         if user.check_password(form.password.data) and user is not None:
+            login_user(user)
+            flash('Login Successful!')
+            next = request.args.get('next')
+
+            if next == None or not next[0] == '/':
+                next = url_for('core.index')
+
+            return redirect(next)
+
+    return render_template('login.html', form=form)
+
+
+@users.logout('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for("core.index"))
