@@ -15,7 +15,7 @@ def add_profile_pic(pic_upload, username):
                             'static/profile_pics', storage_filename)
 
     # Play Around with this size.
-    output_size = (200, 200)
+    output_size = (400, 400)
 
     # Open the picture and save it
     pic = Image.open(pic_upload)

@@ -3,6 +3,7 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Email, EqualTo
 from wtforms import ValidationError
 from flask_wtf.file import FileField, FileAllowed
+from flask import flash
 
 from flask_login import current_user
 from impact.models import User
@@ -26,6 +27,7 @@ class RegisterForm(FlaskForm):
 
     def check_username(self, field):
         if User.query.filer_by(username=field.data).first():
+            flash('Username is already taken!')
             raise ValidationError("Username is already taken!")
 
 

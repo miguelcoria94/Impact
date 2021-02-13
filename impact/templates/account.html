@@ -9,10 +9,33 @@
   </div>
 
   <div class="container">
+  {% with messages = get_flashed_messages(category_filter=["success"]) %}
+  {% if messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+  {% endif %}
+  {% endwith %}
     <form  method="POST" action="" enctype="multipart/form-data">
         {{form.hidden_tag()}}
-      <div class="form-group">
-        {{form.username.label(class='form-group')}}
+
+
+    <div class="form-group">
+        {% with errors = get_flashed_messages(category_filter=["error"]) %}
+            {% if errors %}
+                <div class="alert alert-danger alert-dismissible fade show">
+                {%- for msg in errors %}
+                    {{ msg }}
+                {% endfor -%}
+                </div>
+            {% endif %}
+        {% endwith %}  
+        {{form.username.label(class='form-group')}} 
         {{form.username(class='form-control')}}
       </div>
     

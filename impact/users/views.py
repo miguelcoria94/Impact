@@ -26,6 +26,7 @@ def register():
 
 @users.route('/login', methods=['GET', 'POST'])
 def login():
+
     form = LoginForm()
     if form.validate_on_submit():
 
@@ -34,7 +35,7 @@ def login():
         if user.check_password(form.password.data) and user is not None:
 
             login_user(user)
-            flash('Log in Success!')
+            flash('Welcome Back!')
 
             next = request.args.get('next')
 
@@ -56,7 +57,15 @@ def logout():
 def account():
 
     form = UpdateUserForm()
+
     if form.validate_on_submit():
+
+        user = User.query.filter_by(username=form.username.data).first()
+
+        if user and user is not current_user.username:
+            flash(u'There was a problem updating your username!', 'error')
+            return redirect(url_for('users.account'))
+
 
         if form.avatar.data:
             username = current_user.username
@@ -66,12 +75,14 @@ def account():
         current_user.username = form.username.data
         current_user.email = form.email.data
         db.session.commit()
-        flash('Your account had been updated!')
+        flash(u'Your account has been successfully updated!', 'success')
         return redirect(url_for('users.account'))
+
     
     elif request.method == "GET":
         form.username.data = current_user.username
         form.email.data = current_user.email
+
 
     profile_image = url_for('static', filename='profile_pics/' + current_user.profile_image)
     return render_template('account.html', profile_image=profile_image, form=form)
