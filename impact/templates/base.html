@@ -36,12 +36,7 @@
                     <li class="nav-item p-1">
                         <a class="nav-link" href="{{url_for('core.about')}}">About</a>
                     </li>
-                    <li class="nav-item p-1">
-                        <a class="nav-link" href="#" >Login</a>
-                    </li>
-                    <li class="nav-item p-1">
-                        <a class="nav-link" href="#" >Logout</a>
-                    </li>
+                    {% if current_user.is_authenticated%}
                     <li class="nav-item p-1">
                         <a class="nav-link" href="#" >Account</a>
                     </li>
@@ -49,8 +44,16 @@
                         <a class="nav-link" href="#" >Create Post</a>
                     </li>
                     <li class="nav-item p-1">
+                        <a class="nav-link" href="#" >Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item p-1">
                         <a class="nav-link" href="#" >Register</a>
                     </li>
+                    <li class="nav-item p-1">
+                        <a class="nav-link" href="#" >Login</a>
+                    </li>
+                    {%endif %}
                 </ul>
             </div>
         </div>
