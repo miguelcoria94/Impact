@@ -58,12 +58,18 @@ def account():
 
     form = UpdateUserForm()
 
+
     if form.validate_on_submit():
 
         email = User.query.filter_by(email=form.email.data).first()
+        user = User.query.filter_by(username=form.username.data).first()
 
         if form.username.data == current_user.username and form.email.data == current_user.email:
             flash('Your account is already up to date!', 'success')
+            return redirect(url_for('users.account'))
+
+        if user is not None and email is not None:
+            flash('Your account could now be updated', 'error')
             return redirect(url_for('users.account'))
 
 
