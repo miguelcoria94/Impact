@@ -35,7 +35,7 @@ def login():
         if user.check_password(form.password.data) and user is not None:
 
             login_user(user)
-            flash('Welcome Back!')
+            flash(u'Welcome Back!', 'success')
 
             next = request.args.get('next')
 
@@ -60,10 +60,10 @@ def account():
 
     if form.validate_on_submit():
 
-        user = User.query.filter_by(username=form.username.data).first()
+        email = User.query.filter_by(email=form.email.data).first()
 
-        if user and user is not current_user.username:
-            flash(u'There was a problem updating your username!', 'error')
+        if form.username.data == current_user.username and form.email.data == current_user.email:
+            flash('Your account is already up to date!', 'success')
             return redirect(url_for('users.account'))
 
 
