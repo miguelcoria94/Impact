@@ -7,15 +7,16 @@ from flask_wtf.file import FileField, FileAllowed
 from flask_login import current_user
 from impact.models import User
 
+
 class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField('Login')
+    submit = SubmitField('Log In')
 
 class RegisterForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     username = StringField('UserName', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired, EqualTo('confirm_password', message="Passwords must match!")])
+    password = PasswordField('Password', validators=[DataRequired(), EqualTo('confirm_password', message="Passwords must match!")])
     confirm_password = PasswordField("Confirm Password", validators=[DataRequired()])
     submit = SubmitField("Create Account")
     

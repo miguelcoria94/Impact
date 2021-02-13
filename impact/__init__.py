@@ -25,6 +25,8 @@ login_manager = LoginManager()
 
 login_manager.init_app(app)
 login_manager.login_view = 'users.login'
+
+
 from impact.core.views import core
 from impact.errors.error_handlers import error_pages
 from impact.users.views import users
