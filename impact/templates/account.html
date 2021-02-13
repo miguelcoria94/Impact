@@ -3,9 +3,9 @@
 <div class="jumbotron">
   <div class="">
     <div align='center'>
-      <img class="img-thumbnail p-4 mb-4" align='center' src="{{url_for('static',filename='profile_pics/'+current_user.profile_image)}}" width="350">
+      <img class="img-thumbnail mb-4" align='center' src="{{url_for('static',filename='profile_pics/'+current_user.profile_image)}}" width="250">
       <h1>Welcome {{current_user.username}}!</h1>
-      <p>{{ current_user.email }}</p>
+      <p class='text-muted'>{{ current_user.email }}</p>
     </div>
   </div>
 
