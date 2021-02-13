@@ -74,4 +74,8 @@ def account():
     profile_image = url_for('static', filename="profile_pics/" + current_user.profile_image)
     return render_template('account.html', profile_image=profile_image, form=form)
 
+@users.route("/<username>")
+def user_posts(username):
+    page = request.args.get('page', 1, type=int)
+    user = User.query.filter_by(username=username).first_or_404()
     
