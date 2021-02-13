@@ -23,11 +23,11 @@
 
     <title>impact</title>
 </head>
-<body style="background-color: #fdc500;">
-    <div class="container" style="background-color: #fdc500;">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fdc500;">
+<body style="background-color: #ffffff;">
+    <div class="container" style="background-color: #ffffff;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffffff;">
         <div class="container-fluid">
-            <a class="navbar-brand font-weight-bold logo-text" href="/" style="color: #000000;" >Impact.</a>
+            <a class="navbar-brand font-weight-bold logo-text" href="/" style="color: #000000;" >Impact<span class="text-warning">.</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,16 +68,14 @@
         {% block content %}
         {% endblock%}
     </div>
-    <!-- Footer -->
     <footer class="text-center text-lg-start container fluid">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: #fdc500;">
-            © 2020 Copyright:
-            <a class="text-dark" href="https://mcoria.com/">mcoria.com</a>
+        <div class="d-flex justify-content-center p-1" style="background-color: #ffffff;">
+            <a class="text-dark m-3" href="https://www.linkedin.com/in/miguel-coria-273888130/"><i class="fab fa-linkedin"></i> Linkedin</a>
+            <a class="text-dark m-3" href="https://github.com/miguelcoria94"><i class="fab fa-github-square"></i> Github Repo</a>
+            <a class="text-dark m-3" href="https://docs.google.com/document/d/16_YpkY8Qy2cX0o2C9MWXYYrV6i9SFTaa2LbqC3lco7s/edit"><i class="fas fa-file-word"></i> Resume</a>
         </div>
-        <!-- Copyright -->
+        <p class="text-dark pl-1 text-center" href="https://mcoria.com/">© 2020 Copyright Miguel Coria</p>
     </footer>
-    <!-- Footer -->
 </body>
 <script>
     let pathname = window.location.pathname

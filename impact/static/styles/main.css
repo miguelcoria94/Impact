@@ -9,3 +9,12 @@
 .logo-text {
     font-size: 30px !important;
 }
+
+.form-div {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color:  #fdc500 !important;
+}
