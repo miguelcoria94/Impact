@@ -31,15 +31,17 @@ class RegisterForm(FlaskForm):
 
 class UpdateUserForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
-    username = StringField('UserName', validators=[DataRequired()])
-    avatar = FileField('Update your Profile Picture',
-                       validators=[FileAllowed(['jpg', 'png'])])
+    username = StringField('Username', validators=[DataRequired()])
+    avatar = FileField('Update Profile Picture', validators=[
+                        FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Update')
 
     def check_email(self, field):
+        # Check if not None for that user email!
         if User.query.filter_by(email=field.data).first():
-            raise ValidationError("This email is already in use!")
+            raise ValidationError('Your email has been registered already!')
 
     def check_username(self, field):
-        if User.query.filer_by(username=field.data).first():
-            raise ValidationError("Username is already taken!")
+        # Check if not None for that username!
+        if User.query.filter_by(username=field.data).first():
+            raise ValidationError('Sorry, that username is taken!')
