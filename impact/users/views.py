@@ -64,19 +64,22 @@ def account():
         email = User.query.filter_by(email=form.email.data).first()
         user = User.query.filter_by(username=form.username.data).first()
 
-        if form.username.data == current_user.username and form.email.data == current_user.email:
-            flash('Your account is already up to date!', 'success')
-            return redirect(url_for('users.account'))
-
-        if user is not None and email is not None:
-            flash('Your account could now be updated', 'error')
-            return redirect(url_for('users.account'))
-
-
         if form.avatar.data:
             username = current_user.username
             pic = add_profile_pic(form.avatar.data, username)
             current_user.profile_image = pic
+
+        if form.username.data == current_user.username and form.email.data == current_user.email:
+            flash('Your account is already up to date!', 'success')
+            db.session.commit()
+            return redirect(url_for('users.account'))
+
+        if user is not None and email is not None:
+            flash('Your account could now be updated', 'error')
+            db.session.commit()
+            return redirect(url_for('users.account'))
+
+
 
         current_user.username = form.username.data
         current_user.email = form.email.data
