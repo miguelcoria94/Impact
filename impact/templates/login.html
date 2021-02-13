@@ -2,20 +2,12 @@
 {% block content %}
 <div class="jumbotron custom-jumbo">
   <div class="row">
-        <div class="col">
+        <div class="col-md-6 col-sm-12 align-self-center">
             <div class="row pb-5">
-                <div class="col-6 mb-5">
-                    <i class="fas fa-fist-raised"></i>
-                </div>
-                <div class="col-6 d-flex justify-content-end mb-5">
-                    <a class="btn btn-dark" href="/register">
-                       Register 
-                    </a>
-                </div>
-                <div class="col-12">
-                    <p class="text-muted">Login with your email and password</p>
+                <div class="col-sm-12">
+                    <p class="text-muted">WELCOME BACK</p>
                     <h3>
-                        Create an account
+                        Login with your email and password
                     </h3>
                     <form method="POST">
                         {{form.hidden_tag()}}
@@ -35,7 +27,9 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md-6 d-flex justify-content-center">
+            <img class="" align='center'
+                src="{{url_for('static',filename='images/login-hand.png')}}" width="250">
         <div>
   </row>  
 </div>
