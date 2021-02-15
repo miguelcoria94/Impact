@@ -3,14 +3,21 @@
 <div class="jumbotron bg-white m-0">
     <div class="row align-self-center">
         <div class="col-md-6 col-sm-12 align-self-center">
-            <form method="POST" class="">
-                {{form.hidden_tag()}}
-                {{form.email.label}}{{form.email(class='')}}<br>
-                {{form.username.label}}{{form.username}}<br>
-                {{form.password.label}}{{form.password}}<br>
-                {{form.confirm_password.label}}{{form.confirm_password}}<br>
-                {{form.submit()}}
-            </form>
+            <div class="row jumbotron pb-6 pt-6 form-div">
+                <div class="col-sm-12">
+                    <form method="POST" class="">
+                        {{form.hidden_tag()}}
+                        {{form.email.label}}{{form.email(class='')}}<br>
+                        {{form.username.label}}{{form.username}}<br>
+                        {{form.password.label}}{{form.password}}<br>
+                        {{form.confirm_password.label}}{{form.confirm_password}}<br>
+                        {{form.submit()}}
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-self-center">
+            <img class="" align='center' src="{{url_for('static',filename='images/login-hand.png')}}" width="250">
         </div>
     </div>
 </div>
