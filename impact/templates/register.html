@@ -11,24 +11,24 @@
                     </h3>
                     <form method="POST" class="">
                         {{form.hidden_tag()}}
-                        <div>
-                            {{form.email.label}}
-                            {{form.email(class='')}}
+                        <div class="form-group">
+                            {{form.email.label(class='form-group text-dark')}}
+                            {{form.email(class='form-control')}}
                         </div>
-                        <div>
-                            {{form.username.label}}
-                            {{form.username}}<br>
+                        <div class="form-group">
+                            {{form.username.label(class='form-group text-dark')}}
+                            {{form.username(class='form-control')}}
                         </div>
-                        <div>
-                            {{form.password.label}}
-                            {{form.password}}<br>
+                        <div class="form-group">
+                            {{form.password.label(class='form-group text-dark')}}
+                            {{form.password(class='form-control')}}
                         </div>
-                        <div>
-                            {{form.confirm_password.label}}
-                            {{form.confirm_password}}<br>
+                        <div class="form-group">
+                            {{form.confirm_password.label(class='form-group text-dark')}}
+                            {{form.confirm_password(class='form-control')}}
                         </div>
-                        <div>
-                            {{form.submit()}}
+                        <div class="form-group">
+                            {{form.submit(class='btn btn-light')}}
                         </div>
                     </form>
                         <p class="text-muted">Have an account already? <a class="text-warning" href="/login">login here!</a>
