@@ -18,7 +18,7 @@ def register():
 
         db.session.add(user)
         db.session.commit()
-        flash('Thanks for registration!')
+        flash(u'Your account was successfully created!', 'success')
         return redirect(url_for('users.login'))
 
     return render_template('register.html', form=form)
@@ -41,6 +41,7 @@ def login():
 
             if next == None or not next[0] == '/':
                 next = url_for('core.index')
+
             return redirect(next)
     return render_template('login.html', form=form)
 

@@ -9,6 +9,18 @@
                     <h3 class="text-dark">
                         Login with your email and password
                     </h3>
+                    {% with messages = get_flashed_messages(category_filter=["success"]) %}
+                    {% if messages %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {% for message in messages %}
+                        {{ message }}
+                        {% endfor %}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    {% endif %}
+                    {% endwith %}
                     <form method="POST">
                         {{form.hidden_tag()}}
                         <div class="form-group">
