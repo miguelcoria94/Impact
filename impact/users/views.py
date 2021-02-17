@@ -32,6 +32,16 @@ def login():
 
         user = User.query.filter_by(email=form.email.data).first()
 
+
+        if user == None:
+            flash(u'There was a problem with your request!', 'error')
+            return render_template('login.html', form=form)
+
+        if user.check_password(form.password.data) is False:
+            flash(u'Incorrect email or password!', 'error')
+            return render_template('login.html', form=form)
+
+            
         if user.check_password(form.password.data) and user is not None:
 
             login_user(user)
@@ -43,6 +53,8 @@ def login():
                 next = url_for('core.index')
 
             return redirect(next)
+
+
     return render_template('login.html', form=form)
 
 
@@ -77,7 +89,7 @@ def account():
             return redirect(url_for('users.account'))
 
         if user is not None and email is not None:
-            flash('Your account could now be updated', 'error')
+            flash('Your account could not be updated', 'error')
             db.session.commit()
             return redirect(url_for('users.account'))
 
