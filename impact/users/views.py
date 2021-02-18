@@ -11,14 +11,19 @@ users = Blueprint('users', __name__)
 def register():
     form = RegisterForm()
 
-    if form.validate_on_submit():
+        
 
-        useremailcheck = User.query.filter_by(email=form.email.data).first()
-        usernamecheck = User.query.filter_by(username=form.username.data).first()
+    if form.validate_on_submit():
 
         user = User(email=form.email.data,
                     username=form.username.data,
                     password=form.password.data)
+
+            # flash(u'Please make sure your passwords match!', 'error')
+
+        useremailcheck = User.query.filter_by(email=form.email.data).first()
+        usernamecheck = User.query.filter_by(username=form.username.data).first()
+
         
         if useremailcheck != None:
             flash(u'The email you entered is already taken!', 'error')
@@ -27,7 +32,7 @@ def register():
         if usernamecheck != None:
             flash(u'The username you entered is already taken!', 'error')
             return render_template('register.html', form=form)
-            
+
         db.session.add(user)
         db.session.commit()
         flash(u'Your account was successfully created!', 'success')
