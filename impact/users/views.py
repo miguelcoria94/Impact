@@ -34,7 +34,7 @@ def login():
 
 
         if user == None:
-            flash(u'There was a problem with your request!', 'error')
+            flash(u'There was a problem finding your account!', 'error')
             return render_template('login.html', form=form)
 
         if user.check_password(form.password.data) is False:

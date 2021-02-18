@@ -79,10 +79,10 @@
 </body>
 <script>
     let pathname = window.location.pathname
-    console.log(pathname)
-        pages = ['/', '/about', '/account', '/login', '/register'];
+        pages = ['/', '/about', '/register', '/account', '/login'];
 
     $('.nav-item').each(function (i) {
+        console.log(pages[i])
         if (pathname === (pages[i])) this.classList.add('active');
         else if (this.className.includes('active')) this.classList.remove('active');
     });
