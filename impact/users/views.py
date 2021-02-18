@@ -27,11 +27,7 @@ def register():
         if usernamecheck != None:
             flash(u'The username you entered is already taken!', 'error')
             return render_template('register.html', form=form)
-
-        if form.password.data != form.confirm_password.data:
-            flash(u'Please make sure your passwords match!', 'error')
-            return render_template('register.html', form=form)
-
+            
         db.session.add(user)
         db.session.commit()
         flash(u'Your account was successfully created!', 'success')
