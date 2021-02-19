@@ -12,4 +12,6 @@ def create_post():
     form = PostForm()
 
     if form.validate_on_submit():
-        blog_post = Post(title=)
+        blog_post = Post(title=form.title.data, text=form.text.data, user_id=current_user.id)
+
+        
