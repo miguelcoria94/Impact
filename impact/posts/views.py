@@ -14,4 +14,8 @@ def create_post():
     if form.validate_on_submit():
         blog_post = Post(title=form.title.data, text=form.text.data, user_id=current_user.id)
 
+        db.session.add(blog_post)
+        db.session.commit()
+        return redirect(url_for('core.index'))
         
+    return render_template('create_post.html', form=form)
