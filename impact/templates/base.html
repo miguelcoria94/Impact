@@ -45,6 +45,9 @@
                         <a class="nav-link" href="{{ url_for('blog_post.create_post')}}" >Create Post</a>
                     </li>
                     <li class="nav-item p-1">
+                        <a class="nav-link" href="{{url_for('core.about')}}">About</a>
+                    </li>
+                    <li class="nav-item p-1">
                         <a class="nav-link" href="{{ url_for('users.logout')}}" >Logout</a>
                     </li>
                     {% else %}
@@ -54,10 +57,10 @@
                     <li class="nav-item p-1">
                         <a class="nav-link" href="{{ url_for('users.login')}}" >Login</a>
                     </li>
-                    {% endif %}
                     <li class="nav-item p-1">
                         <a class="nav-link" href="{{url_for('core.about')}}">About</a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
