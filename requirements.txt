@@ -32,3 +32,4 @@ URLObject==2.4.3
 Werkzeug==0.14.1
 wincertstore==0.2
 WTForms==2.1
+gunicorn
