@@ -34,8 +34,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ">
-                    <li class="nav-item p-1" aria-current="true">
-                        <a class="nav-link" aria-current="page" href="{{url_for('core.index')}}">Home</a>
+                    <li class="nav-item p-1" >
+                        <a class="nav-link" href="{{url_for('core.index')}}">Home</a>
                     </li>
                     <li class="nav-item p-1">
                         <a class="nav-link" href="{{url_for('core.about')}}">About</a>
@@ -79,12 +79,12 @@
 </body>
 <script>
     let pathname = window.location.pathname
-        pages = ['/', '/about', '/register', '/account', '/login'];
+        pages = ['/', '/about', '/register', '/account', '/login', '/create'];
 
-    $('.nav-item').each(function (i) {
-        console.log(pages[i])
-        if (pathname === (pages[i])) this.classList.add('active');
-        else if (this.className.includes('active')) this.classList.remove('active');
-    });
+    $(document).ready(function() {
+  $('li.active').removeClass('active');
+  $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
+});
+
 </script>
 </html>
