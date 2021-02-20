@@ -1,8 +1,8 @@
 import os
 # pip install pillow
-from PIL import Image
 
 from flask import url_for, current_app
+from PIL import Image
 
 
 def add_profile_pic(pic_upload, username):
