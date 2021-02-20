@@ -29,7 +29,7 @@ SQLAlchemy==1.2.6
 SQLAlchemy-Utils==0.33.2
 urllib3
 URLObject==2.4.3
-Werkzeug==0.14.1
+Werkzeug
 wincertstore==0.2
 WTForms==2.1
 gunicorn
