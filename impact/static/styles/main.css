@@ -19,5 +19,6 @@
     color:  #fdc500 !important;
 }
 textarea {
-  height: 500px;
+  height: 300px !important;
+  resize: none;
 }
