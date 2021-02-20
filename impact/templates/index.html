@@ -28,10 +28,11 @@
       <div class="card-body">
         
         <h2><a class="card-title text-dark" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
-        <a class="text-muted" href="{{ url_for('users.user_posts', username=post.author.username) }}">Posted by {{ post.author.username }}</a>
-        <p class="text-muted">Published on: {{ post.date.strftime('%Y-%m-%d') }}</p>
+        <a class="text-muted" href="{{ url_for('users.user_posts', username=post.author.username) }}">By {{ post.author.username }}</a>
+        <img class=" card-image" align='center' src="{{url_for('static',filename='profile_pics/'+post.author.profile_image)}}" width="30">
+        <p class="text-muted">Posted on: {{ post.date.strftime('%Y-%m-%d') }}</p>
         <p class="card-text text-dark">{{ post.text[:100] }}...</p>
-        <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn btn-secondary">Read Post</a>
+        <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn btn-secondary">Continue Reading <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
 
@@ -46,7 +47,7 @@
             <a class="page-link" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
           </li>
           {% else %}
-            <li class="page-item"><a class="page-link" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
+            <li class="page-item"><a class="page-link text-dark" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
           {% endif %}
       {% endfor %}
     </nav>

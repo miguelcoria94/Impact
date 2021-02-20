@@ -22,3 +22,7 @@ textarea {
   height: 250px !important;
   resize: none;
 }
+
+.card-image {
+    border-radius: 100%;
+}
