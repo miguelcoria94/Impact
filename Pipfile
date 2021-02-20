@@ -39,6 +39,7 @@ URLObject = "==2.4.3"
 WTForms = "==2.1"
 gunicorn = "*"
 Werkzeug = "==0.16.1"
+Pillow = "==8.1.0"
 
 [dev-packages]
 
