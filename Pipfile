@@ -38,6 +38,7 @@ SQLAlchemy-Utils = "==0.33.2"
 URLObject = "==2.4.3"
 Werkzeug = "==0.14.1"
 WTForms = "==2.1"
+gunicorn = "*"
 
 [dev-packages]
 
