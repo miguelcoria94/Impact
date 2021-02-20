@@ -20,27 +20,25 @@
   <p>Register today to begin sharing and interacting with other users</p>
   <a class="btn btn-warning btn-lg" href="/register" role="button">Register Today!</a>
 </div>
-<div class="container">
-
+<div>
+  <h1 class="text-dark fs-1">Recent Posts</h1>
     {# Go through each blog post #}
     {% for post in blog_posts.items %}
-
-    <div class="card" >
-
+    <div class="card w-100 mb-4">
       <div class="card-body">
-
-
-        <h2><a class="card-title" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
-        <a href="{{ url_for('users.user_posts', username=post.author.username) }}">Written By: {{ post.author.username }}</a>
-        <p>Published on: {{ post.date.strftime('%Y-%m-%d') }}</p>
-        <p class="card-text">{{ post.text[:100] }}...</p>
-        <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn btn-primary">Read Blog Post</a>
+        
+        <h2><a class="card-title text-dark" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
+        <a class="text-muted" href="{{ url_for('users.user_posts', username=post.author.username) }}">Posted by {{ post.author.username }}</a>
+        <p class="text-muted">Published on: {{ post.date.strftime('%Y-%m-%d') }}</p>
+        <p class="card-text text-dark">{{ post.text[:100] }}...</p>
+        <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn btn-secondary">Read Post</a>
       </div>
     </div>
 
    {% endfor %}
-
-   <nav aria-label="Page navigation example">
+</div>
+</div>
+   <nav aria-label="Page navigation example" class="mt-5">
      <ul class="pagination justify-content-center">
        {% for page_num in blog_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
           {% if blog_posts.page == page_num %}
@@ -52,7 +50,5 @@
           {% endif %}
       {% endfor %}
     </nav>
-
-<div>
 
 {% endblock %}
