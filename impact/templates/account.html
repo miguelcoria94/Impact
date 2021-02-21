@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="jumbotron">
-  <div class="">
-    <div align='center'>
-      <img class="img-thumbnail mb-4" align='center' src="{{url_for('static',filename='profile_pics/'+current_user.profile_image)}}" width="250">
-      <h1 class="">Welcome {{current_user.username}}!</h1>
-      <p class='text-muted'>{{ current_user.email }}</p>
-    </div>
+<div class="row">
+  <div class="col">
+    <img class="img-thumbnail mb-4" align='center' src="{{url_for('static',filename='profile_pics/'+current_user.profile_image)}}" width="250">
+    <h1 class="font-weight-bold">{{current_user.username}}</h1>
+    <p class='text-muted'>{{ current_user.email }}</p>
   </div>
-
-  <div class="container">
+  <div class="col container">
+  <h1 class="font-weight-bold">Account Settings</h1>
   {% with messages = get_flashed_messages(category_filter=["success"]) %}
   {% if messages %}
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -59,5 +58,37 @@
 
     </form>
   </div>
+  </div>
 </div>
+<div>
+  <h1>{{current_user.username}}'s post</h1>
+{% for post in posts.items  %}
+<div class="card">
+  <h2> <a href="{{url_for('blog_post.blog_post',blog_post_id=post.id)}}">{{post.title}}</a> </h2>
+  Written By: <a href="{{url_for('users.user_posts',username=post.author.username)}}">{{post.author.username}}</a>
+  <p class='text-muted'>Published on: {{post.date.strftime("%Y-%m-%d")}}</p>
+   <br>
+   <p>{{post.text}}</p>
+   <br>
+</div>
+{% endfor %}
+</div>
+</div>
+
+<nav aria-label='Page Navigation example'>
+<ul class="pagination justify-content-center">
+    {% for page_num in posts.iter_pages(left_edge=1,right_edge=1,left_current=1,right_current=2)  %}
+      {% if posts.page == page_num %}
+      <li class='page-item disabled'>
+        <a class="page-link" href="{{url_for('users.account',username=user.username,page=page_num)}}">{{ page_num}}</a>
+      </li>
+      {% else %}
+      <li class='page-item'>
+        <a class="page-link" href="{{url_for('users.account',username=user.username,page=page_num)}}">{{ page_num}}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+</nav>
 {% endblock %}

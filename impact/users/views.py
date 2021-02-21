@@ -86,8 +86,13 @@ def logout():
 @users.route('/account', methods=['GET', 'POST'])
 @login_required
 def account():
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.filter_by(user_id=current_user.id).order_by(Post.date.desc()).paginate(page=page, per_page=3)
+    user = User.query.filter_by(username=current_user.username).first()
 
     form = UpdateUserForm()
+
+
 
 
     if form.validate_on_submit():
@@ -125,7 +130,7 @@ def account():
 
 
     profile_image = url_for('static', filename='profile_pics/' + current_user.profile_image)
-    return render_template('account.html', profile_image=profile_image, form=form)
+    return render_template('account.html', profile_image=profile_image, form=form, posts=posts, user=user)
 
 @users.route("/<username>")
 def user_posts(username):
