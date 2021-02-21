@@ -61,7 +61,7 @@
   </div>
 </div>
 <div>
-  <h1 class="font-weight-bold">Posts</h1>
+  <h1 class="font-weight-bold">{{current_user.username}}'s posts</h1>
 {% for post in posts.items  %}
 <div class="card bg-light mb-3 p-4">
   <h2 class="text-dark"> <a class="text-dark" href="{{url_for('blog_post.blog_post',blog_post_id=post.id)}}">{{post.title}}</a> </h2>
