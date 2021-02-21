@@ -9,7 +9,7 @@
 
 
 <div class="">
-<h1 class="font-weight-bold mt-5">Most Recent Post</h1>
+<h1 class="font-weight-bold mt-5">Most Recent Posts</h1>
 {% for post in posts.items  %}
 <div class="mt-5 mb-3 border rounded p-4 bg-light">
   <h2 class="text-dark"> <a class="text-dark" href="{{url_for('blog_post.blog_post',blog_post_id=post.id)}}">{{post.title}}</a> </h2>
