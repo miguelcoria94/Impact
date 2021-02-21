@@ -21,14 +21,14 @@
   <a class="btn btn-warning btn-lg" href="/register" role="button">Register Today!</a>
 </div>
 <div>
-  <h1 class="text-dark fs-1">Recent Posts</h1>
+  <h1 class="text-dark fs-1 font-weight-bold">Most Recent Posts</h1>
     {# Go through each blog post #}
     {% for post in blog_posts.items %}
     <div class="card w-100 mb-4">
       <div class="card-body">
         
         <h2><a class="card-title text-dark" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
-        <a class="text-muted" href="{{ url_for('users.user_posts', username=post.author.username) }}">By {{ post.author.username }}</a>
+        <a class="text-muted" href="{{ url_for('users.user_posts', username=post.author.username) }}"> <span class="text-warning">{{post.author.username}}</span></a>
         <img class=" card-image" align='center' src="{{url_for('static',filename='profile_pics/'+post.author.profile_image)}}" width="30">
         <p class="text-muted">Posted on: {{ post.date.strftime('%Y-%m-%d') }}</p>
         <p class="card-text text-dark">{{ post.text[:100] }}...</p>
