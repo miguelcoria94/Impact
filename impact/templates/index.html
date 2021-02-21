@@ -14,11 +14,18 @@
         {% endif %}
     {% endwith %}
 <div class="jumbotron">
-  <h1 class="display-4">What keeps you going?</h1>
-  <p class="lead">Impact is a place where you can share the stories that have had the most influence in your life..</p>
-  <hr class="my-4">
-  <p>Register today to begin sharing and interacting with other users</p>
-  <a class="btn btn-warning btn-lg" href="/register" role="button">Register Today!</a>
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4">What keeps you going?</h1>
+      <p class="lead">Impact is a place where you can share the stories that have had the most influence in your life..</p>
+      <hr class="my-4">
+      <p>Register today to begin sharing and interacting with other users</p>
+      <a class="btn btn-warning btn-lg" href="/register" role="button">Register Today!</a>
+    </div>
+    <div class="col">
+    <img class="" align='center' src="{{url_for('static',filename='images/hands.png')}}" height="300">
+    </div>
+  </div>
 </div>
 <div>
   <h1 class="text-dark fs-1 font-weight-bold">Most Recent Posts</h1>
