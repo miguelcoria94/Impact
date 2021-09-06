@@ -1,8 +1,12 @@
-# Impact
+# **Impact**
 
-Working Demo [Live Link](http://impact-v2.herokuapp.com/)
+## Full Stack Application
 
-### Front-End Technologies Used
+### An app to share stories that have impacted us the most.
+
+**Working Demo [Live Link](http://impact-v2.herokuapp.com/)**
+
+## Front-End Technologies Used
 
 - HTML
 - CSS
@@ -11,7 +15,7 @@ Working Demo [Live Link](http://impact-v2.herokuapp.com/)
 - JavaScript
 - Jinja Templates
 
-### Back-End Technologies Used
+## Back-End Technologies Used
 
 - Flask
 - Python
@@ -21,4 +25,13 @@ Working Demo [Live Link](http://impact-v2.herokuapp.com/)
 
 # Features
 
-### User Auth
+## **User Authentication**
+
+| User Model    |             |
+| ------------- | ----------- |
+| id            | Primary Key |
+| profile_image | String      |
+| profile_image | String      |
+| profile_image | String      |
+| profile_image | String      |
+| profile_image | String      |
