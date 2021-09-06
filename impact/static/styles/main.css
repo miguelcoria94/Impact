@@ -8,6 +8,10 @@ body {
 
 /* navbar */
 
+nav {
+  padding: 1rem 3rem !important;
+}
+
 .nav-item {
   padding-left: 1rem;
 }
@@ -86,5 +90,9 @@ textarea {
 @media only screen and (max-width: 750px) {
   .nav-item {
     padding-left: 0rem !important;
+  }
+
+  nav {
+    padding: 1rem 1rem !important;
   }
 }
