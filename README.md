@@ -9,6 +9,7 @@ Working Demo [Live Link](http://impact-v2.herokuapp.com/)
 - BOOTSTRAP4
 - JQuery
 - JavaScript
+- Jinja Templates
 
 ### Back-End Technologies Used
 
