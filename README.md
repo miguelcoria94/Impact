@@ -16,6 +16,7 @@ Working Demo [Live Link](http://impact-v2.herokuapp.com/)
 - Python
 - SQLite
 - SQLAlchemy
+- Anaconda Virtual Enviroment
 
 # Features
 
