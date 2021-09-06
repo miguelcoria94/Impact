@@ -9,7 +9,7 @@ body {
 /* navbar */
 
 .nav-item {
-  margin-left: 1rem !important;
+  padding-left: 1rem;
 }
 
 .nav-link {
@@ -75,4 +75,10 @@ textarea {
 
 .card-image {
   border-radius: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+  .nav-item {
+    padding-left: 0rem !important;
+  }
 }
