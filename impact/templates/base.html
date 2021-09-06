@@ -25,21 +25,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+
     <link
       rel="stylesheet"
       type="text/css"
@@ -59,71 +45,73 @@
     <title>Impact - Home</title>
   </head>
   <body style="background-color: #ffffff">
-    <div class="container-fluid" style="background-color: #ffffff">
-      <nav
-        class="navbar navbar-expand-lg navbar-light"
-        style="background-color: #ffffff"
+    <nav
+      class="navbar navbar-expand-md navbar-light"
+      style="background-color: #ffffff"
+    >
+      <a
+        class="navbar-brand font-weight-bold logo-text"
+        href="/"
+        style="color: #000000"
+        >Impact<span class="text-warning">.</span></a
       >
-        <div class="container-fluid">
-          <a
-            class="navbar-brand font-weight-bold logo-text"
-            href="/"
-            style="color: #000000"
-            >Impact<span class="text-warning">.</span></a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-              <li class="nav-item p-1">
-                <a class="nav-link" href="{{url_for('core.index')}}">Home</a>
-              </li>
-              {% if current_user.is_authenticated %}
-              <li class="nav-item p-1">
-                <a class="nav-link" href="{{ url_for('users.account')}}"
-                  >Account</a
-                >
-              </li>
-              <li class="nav-item p-1">
-                <a class="nav-link" href="{{ url_for('blog_post.create_post')}}"
-                  >Create Post</a
-                >
-              </li>
-              <li class="nav-item p-1">
-                <a class="nav-link" href="{{url_for('core.about')}}">About</a>
-              </li>
-              <li class="nav-item p-1">
-                <a class="nav-link" href="{{ url_for('users.logout')}}"
-                  >Logout</a
-                >
-              </li>
-              {% else %}
-              <li class="nav-item p-1">
-                <a class="nav-link" href="{{ url_for('users.register')}}"
-                  >Register</a
-                >
-              </li>
-              <li class="nav-item p-1">
-                <a class="nav-link" href="{{ url_for('users.login')}}">Login</a>
-              </li>
-              <li class="nav-item p-1">
-                <a class="nav-link" href="{{url_for('core.about')}}">About</a>
-              </li>
-              {% endif %}
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link p-2" href="{{url_for('core.index')}}">Home</a>
+          </li>
+          {% if current_user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link p-2" href="{{ url_for('users.account')}}"
+              >Account</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2" href="{{ url_for('blog_post.create_post')}}"
+              >Create Post</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2" href="{{url_for('core.about')}}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2" href="{{ url_for('users.logout')}}"
+              >Logout</a
+            >
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link p-2" href="{{url_for('core.about')}}">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link p-2" href="{{ url_for('users.register')}}"
+              >Register</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link nav-login-button p-2"
+              href="{{ url_for('users.login')}}"
+            >
+              Login <span data-feather="log-in" class="nav-icon"></span
+            ></a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
 
     <div class="container">{% block content %} {% endblock%}</div>
     <footer class="text-center text-lg-start container fluid">
@@ -154,16 +142,35 @@
         © 2020 Copyright Miguel Coria
       </p>
     </footer>
-  </body>
-  <script>
-    let pathname = window.location.pathname;
-    pages = ["/", "/about", "/register", "/account", "/login", "/create"];
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let pathname = window.location.pathname;
+      pages = ["/", "/about", "/register", "/account", "/login", "/create"];
 
-    $(document).ready(function () {
-      $("li.active").removeClass("active");
-      $('a[href="' + location.pathname + '"]')
-        .closest("li")
-        .addClass("active");
-    });
-  </script>
+      $(document).ready(function () {
+        $("li.active").removeClass("active");
+        $('a[href="' + location.pathname + '"]')
+          .closest("li")
+          .addClass("active");
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
 </html>

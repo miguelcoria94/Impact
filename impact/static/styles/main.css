@@ -1,28 +1,78 @@
+/* Font Import */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+/* navbar */
+
+.nav-item {
+  margin-left: 1rem !important;
+}
+
+.nav-link {
+  font-size: 0.8rem !important;
+  font-weight: bold !important;
+  color: #afbbcc !important;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: black !important;
+}
+
+.nav-icon {
+  height: 1rem !important;
+  width: 1rem !important;
+  stroke: #fdc500;
+  margin-left: 0.2rem;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #fdc500 !important;
+}
+
+.nav-login-button:hover {
+  color: #fdc500 !important;
+}
+
+.navbar-light .navbar-nav .active .nav-link > .nav-icon {
+  stroke: #fdc500;
+}
+
+.nav-login-button {
+  background-color: #fff7e3 !important;
+  border-radius: 10px !important;
+  color: #fdc500 !important;
+}
 /* account page */
 
 /* login form */
 
 .form-icon {
-    font-size: 50px;
+  font-size: 50px;
+  color: #afbbcc !important;
 }
 
 .logo-text {
-    font-size: 30px !important;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  color: black !important;
 }
 
 .form-div {
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.navbar-light .navbar-nav .active>.nav-link {
-    color:  #fdc500 !important;
-}
 textarea {
   height: 250px !important;
   resize: none;
 }
 
 .card-image {
-    border-radius: 100%;
+  border-radius: 100%;
 }
