@@ -45,15 +45,17 @@
     <title>Impact - Home</title>
   </head>
   <body style="background-color: #ffffff">
-    <nav
-      class="navbar navbar-expand-md navbar-light"
-      style="background-color: #ffffff"
-    >
+    <nav class="navbar navbar-expand-md navbar-light">
       <a
         class="navbar-brand font-weight-bold logo-text"
         href="/"
         style="color: #000000"
-        >Impact<span class="text-warning">.</span></a
+        ><img
+          src="{{ url_for('static', filename='images/teamwork.png') }}"
+          alt=""
+          class="navbar-logo-image"
+        />
+        Impact</a
       >
       <button
         class="navbar-toggler"

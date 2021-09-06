@@ -10,6 +10,14 @@ body {
 
 nav {
   padding: 1rem 3rem !important;
+  background-color: #ffff;
+}
+
+.navbar-logo-image {
+  height: 1.5rem;
+  width: auto;
+  position: relative;
+  bottom: 3px;
 }
 
 .nav-item {
@@ -19,7 +27,7 @@ nav {
 .nav-link {
   font-size: 0.8rem !important;
   font-weight: bold !important;
-  color: #afbbcc !important;
+  color: #8b949e !important;
   display: flex;
   align-items: center;
 }
@@ -53,10 +61,35 @@ nav {
   color: #fdc500 !important;
 }
 
+.nav-brand-logo {
+  stroke: #fdc500;
+}
+
 /* homepage */
 
 .home-header {
-  padding: 3rem 0rem;
+  padding: 6rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.home-header-title {
+  font-size: 4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+
+.home-header-subtitle {
+  color: #8b949e;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-align: center;
 }
 /* account page */
 
@@ -68,9 +101,10 @@ nav {
 }
 
 .logo-text {
-  font-size: 30px !important;
+  font-size: 25px !important;
   font-weight: 800 !important;
   color: black !important;
+  font-weight: 700 !important;
 }
 
 .form-div {
@@ -87,12 +121,46 @@ textarea {
   border-radius: 100%;
 }
 
+@media only screen and (max-width: 863px) {
+  .home-header-title {
+    font-size: 3rem;
+  }
+
+  .home-header {
+    padding: 4rem 2rem;
+  }
+
+  .home-header-subtitle {
+    font-size: 0.7rem;
+  }
+}
+
 @media only screen and (max-width: 750px) {
+  .home-header-title {
+    font-size: 2rem;
+  }
   .nav-item {
     padding-left: 0rem !important;
   }
 
   nav {
     padding: 1rem 1rem !important;
+  }
+
+  .home-header {
+    padding: 3rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .home-header-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .home-header {
+    padding: 2rem 1rem;
   }
 }
