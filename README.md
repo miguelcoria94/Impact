@@ -14,8 +14,9 @@ Working Demo [Live Link](http://impact-v2.herokuapp.com/)
 
 - Flask
 - Python
+- SQLite
+- SQLAlchemy
 
 # Features
 
 ### User Auth
-
