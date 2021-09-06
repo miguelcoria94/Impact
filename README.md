@@ -35,17 +35,25 @@
 - Users can access and update there account
 - Users can create and edit post
 
-| User Model    |             |
-| ------------- | ----------- |
-| id            | Primary Key |
-| profile_image | String      |
-| profile_image | String      |
-| profile_image | String      |
-| profile_image | String      |
-| profile_image | String      |
+| User Model   |             |
+| ------------ | ----------- |
+| id           | Primary Key |
+| profileImage | String      |
+| email        | String      |
+| username     | String      |
+| password     | String      |
+| posts        | String      |
 
 ## **Blog Posts**
 
 - Posts can be created
 - Posts can be updated
 - Posts can be deleted
+
+| Post Model |             |
+| ---------- | ----------- |
+| id         | Primary Key |
+| userId     | String      |
+| date       | String      |
+| title      | String      |
+| text       | String      |
