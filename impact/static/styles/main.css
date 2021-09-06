@@ -48,6 +48,12 @@ body {
   border-radius: 10px !important;
   color: #fdc500 !important;
 }
+
+/* homepage */
+
+.home-header {
+  padding: 3rem 0rem;
+}
 /* account page */
 
 /* login form */
