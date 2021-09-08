@@ -169,12 +169,23 @@ textarea {
 .footer-link {
   font-weight: bold;
   font-size: 0.8rem;
+  color: #8b949e;
 }
 
 .footer-icon {
   height: 0.8rem !important;
   width: 0.8rem !important;
   margin-right: 0.2rem;
+}
+
+.footer-legal-text {
+  color: #afbbcc !important;
+  font-size: 0.7rem !important;
+}
+
+.footer-link:hover {
+  color: #fdc500 !important;
+  text-decoration: none !important;
 }
 
 @media only screen and (max-width: 863px) {
