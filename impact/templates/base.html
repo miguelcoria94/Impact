@@ -166,7 +166,7 @@
         $('a[href="' + location.pathname + '"]')
           .closest("li")
           .addClass("active");
-
+        console.log(pathname);
         switch (pathname) {
           case "/about":
             document.title = "Impact - About";
@@ -179,6 +179,7 @@
             break;
           case "/login":
             document.title = "Impact - Login";
+            break;
           case "/create":
             document.title = "Impact - Create";
             break;
