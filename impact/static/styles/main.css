@@ -164,6 +164,19 @@ textarea {
   padding: 1rem 0rem;
 }
 
+/* footer */
+
+.footer-link {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.footer-icon {
+  height: 0.8rem !important;
+  width: 0.8rem !important;
+  margin-right: 0.2rem;
+}
+
 @media only screen and (max-width: 863px) {
   .home-header-title {
     font-size: 3rem;
