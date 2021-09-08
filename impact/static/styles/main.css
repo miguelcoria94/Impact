@@ -6,6 +6,10 @@ body {
   font-family: "Open Sans", sans-serif !important;
 }
 
+.main-content {
+  min-height: 80vh;
+}
+
 /* navbar */
 
 nav {
@@ -119,6 +123,16 @@ textarea {
 
 .card-image {
   border-radius: 100%;
+}
+
+/* login and register styles */
+
+.login-container {
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+  width: 450px;
+  height: 500px;
 }
 
 @media only screen and (max-width: 863px) {
