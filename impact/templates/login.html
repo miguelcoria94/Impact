@@ -10,7 +10,6 @@
     style="display: block"
     class="navbar-brand font-weight-bold logo-text text-center login-logo"
     href="/"
-    style="color: #000000"
   >
     Impact<span>.</span></a
   >
@@ -44,9 +43,7 @@
       {{form.password(class='form-control login-input', placeholder="Try
       \"password\"")}}
     </div>
-    <div class="form-group login-submit">
-      {{form.submit(class='btn btn-light')}}
-    </div>
+    <div class="form-group">{{form.submit(class='btn login-submit')}}</div>
   </form>
   <span class="login-text">
     If you don't have an account you can
