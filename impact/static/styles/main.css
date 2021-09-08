@@ -256,6 +256,14 @@ textarea {
     font-size: 1.6rem;
     margin-bottom: 1rem;
   }
+
+  .login-container {
+    width: 100%;
+    box-shadow: none !important;
+    padding: 0rem !important;
+    margin: 0rem !important;
+    padding-top: 3rem !important;
+  }
 }
 
 @media only screen and (max-width: 460px) {
