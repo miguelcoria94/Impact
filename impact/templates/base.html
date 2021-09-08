@@ -41,8 +41,6 @@
       href="{{ url_for('static', filename='images/favicon.ico') }}"
       type="image/x-icon"
     />
-
-    <title>Impact - Home</title>
   </head>
   <body style="background-color: #ffffff">
     <nav class="navbar navbar-expand-md navbar-light">
@@ -170,6 +168,25 @@
         $('a[href="' + location.pathname + '"]')
           .closest("li")
           .addClass("active");
+
+        switch (pathname) {
+          case "/about":
+            document.title = "Impact - About";
+            break;
+          case "/register":
+            document.title = "Impact - Register";
+            break;
+          case "/account":
+            document.title = "Impact - Account";
+            break;
+          case "/login":
+            document.title = "Impact - Login";
+          case "/create":
+            document.title = "Impact - Create";
+            break;
+          default:
+            document.title = "Impact - Home";
+        }
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
