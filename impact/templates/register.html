@@ -1,56 +1,43 @@
-{% extends 'base.html' %}
-{% block content %}
-<div class="jumbotron bg-white m-0">
-    <div class="row align-self-center">
-        <div class="col-md-6 col-sm-12 align-self-center">
-            <div class="row jumbotron pb-6 pt-6 form-div">
-                <div class="col-sm-12">
-                    <p class="text-muted">REGISTER TODAY</p>
-                    <h3 class="text-dark">
-                        Fill out the form below to get started
-                    </h3>
-                    {% with errors = get_flashed_messages(category_filter=["error"]) %}
-                    {% if errors %}
-                    <div class="alert alert-danger alert-dismissible fade show">
-                        {%- for msg in errors %}
-                        {{ msg }}
-                        {% endfor -%}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    {% endif %}
-                    {% endwith %}
-                    <form method="POST" class="">
-                        {{form.hidden_tag()}}
-                        <div class="form-group">
-                            {{form.email.label(class='form-group text-dark')}}
-                            {{form.email(class='form-control')}}
-                        </div>
-                        <div class="form-group">
-                            {{form.username.label(class='form-group text-dark')}}
-                            {{form.username(class='form-control')}}
-                        </div>
-                        <div class="form-group">
-                            {{form.password.label(class='form-group text-dark')}}
-                            {{form.password(class='form-control')}}
-                        </div>
-                        <div class="form-group">
-                            {{form.confirm_password.label(class='form-group text-dark')}}
-                            {{form.confirm_password(class='form-control')}}
-                        </div>
-                        <div class="form-group">
-                            {{form.submit(class='btn btn-light')}}
-                        </div>
-                    </form>
-                        <p class="text-muted">Have an account already? <a class="text-warning" href="/login">login here!</a>
-                        </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 d-flex justify-content-center align-self-center">
-            <img class="" align='center' src="{{url_for('static',filename='images/register-hand.png')}}" width="250">
-        </div>
+{% extends 'base.html' %} {% block content %}
+<div
+  class="align-self-center m-auto login-container"
+  data-aos="fade-in"
+  data-aos-duration="500"
+>
+  <p class="text-muted">REGISTER TODAY</p>
+  <h3 class="text-dark">Fill out the form below to get started</h3>
+  {% with errors = get_flashed_messages(category_filter=["error"]) %} {% if
+  errors %}
+  <div class="alert alert-danger alert-dismissible fade show">
+    {%- for msg in errors %} {{ msg }} {% endfor -%}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endif %} {% endwith %}
+  <form method="POST" class="">
+    {{form.hidden_tag()}}
+    <div class="form-group">
+      {{form.email.label(class='form-group text-dark')}}
+      {{form.email(class='form-control')}}
     </div>
+    <div class="form-group">
+      {{form.username.label(class='form-group text-dark')}}
+      {{form.username(class='form-control')}}
+    </div>
+    <div class="form-group">
+      {{form.password.label(class='form-group text-dark')}}
+      {{form.password(class='form-control')}}
+    </div>
+    <div class="form-group">
+      {{form.confirm_password.label(class='form-group text-dark')}}
+      {{form.confirm_password(class='form-control')}}
+    </div>
+    <div class="form-group">{{form.submit(class='btn btn-light')}}</div>
+  </form>
+  <span class="text-muted"
+    >Have an account already?
+    <a class="text-warning" href="/login">login here!</a>
+  </span>
 </div>
 {% endblock %}
