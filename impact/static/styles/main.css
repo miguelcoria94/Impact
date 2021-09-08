@@ -243,6 +243,11 @@ textarea {
   .home-header {
     padding: 3rem 2rem;
   }
+
+  .nav-login-button {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
 }
 
 @media only screen and (max-width: 560px) {
