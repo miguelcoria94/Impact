@@ -264,7 +264,11 @@ textarea {
 
 @media only screen and (max-width: 560px) {
   .home-header-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-header {
     margin-bottom: 1rem;
   }
 
