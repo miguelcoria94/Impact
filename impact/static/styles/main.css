@@ -4,7 +4,7 @@
 
 body {
   font-family: "Open Sans", sans-serif !important;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .main-content {
@@ -12,6 +12,10 @@ body {
 }
 
 /* navbar */
+
+footer {
+  padding-bottom: 1rem;
+}
 
 nav {
   padding: 1rem 3rem !important;
