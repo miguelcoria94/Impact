@@ -4,10 +4,11 @@
 
 body {
   font-family: "Open Sans", sans-serif !important;
+  height: 100vh;
 }
 
 .main-content {
-  min-height: 80vh;
+  min-height: 81%;
 }
 
 /* navbar */
@@ -205,7 +206,7 @@ textarea {
 }
 
 .footer-legal-text {
-  color: #afbbcc !important;
+  color: #8b949e !important;
   font-size: 0.7rem !important;
 }
 
