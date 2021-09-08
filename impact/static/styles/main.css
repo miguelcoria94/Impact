@@ -36,13 +36,13 @@ nav {
 .nav-link {
   font-size: 0.8rem !important;
   font-weight: bold !important;
-  color: #8b949e !important;
+  color: #49494d !important;
   display: flex;
   align-items: center;
 }
 
 .nav-link:hover {
-  color: #49494d !important;
+  color: #fdc500 !important;
 }
 
 .nav-icon {
@@ -207,6 +207,8 @@ textarea {
   height: 0.8rem !important;
   width: 0.8rem !important;
   margin-right: 0.2rem;
+  position: relative;
+  top: 1px;
 }
 
 .footer-legal-text {
