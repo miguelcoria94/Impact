@@ -4,8 +4,15 @@
   data-aos="fade-in"
   data-aos-duration="500"
 >
-  <p class="text-muted">REGISTER TODAY</p>
-  <h3 class="text-dark">Fill out the form below to get started</h3>
+  <p class="text-center login-subtitle">CREATE AN ACCOUNT</p>
+  <a
+    style="display: block"
+    class="navbar-brand font-weight-bold logo-text text-center login-logo"
+    href="/"
+  >
+    Impact<span>.</span></a
+  >
+  <h3 class="login-text">Fill out the form below to get started</h3>
   {% with errors = get_flashed_messages(category_filter=["error"]) %} {% if
   errors %}
   <div class="alert alert-danger alert-dismissible fade show">
