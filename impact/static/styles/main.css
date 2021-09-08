@@ -259,10 +259,24 @@ textarea {
 
   .login-container {
     width: 100%;
-    box-shadow: none !important;
     padding: 0rem !important;
     margin: 0rem !important;
-    padding-top: 3rem !important;
+    margin-top: 3rem !important;
+    padding: 2rem !important;
+  }
+
+  .footer-link {
+    font-size: 0.7rem;
+  }
+
+  .footer-icon {
+    height: 0.7rem !important;
+    width: 0.7rem !important;
+    margin-right: 0.2rem;
+  }
+
+  .main-content {
+    min-height: 80%;
   }
 }
 
