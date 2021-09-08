@@ -38,7 +38,7 @@
     />
     <link
       rel="icon"
-      href="{{ url_for('static', filename='images/favicon.ico') }}"
+      href="{{ url_for('static', filename='images/teamwork.png') }}"
       type="image/x-icon"
     />
   </head>
@@ -166,7 +166,6 @@
         $('a[href="' + location.pathname + '"]')
           .closest("li")
           .addClass("active");
-        console.log(pathname);
         switch (pathname) {
           case "/about":
             document.title = "Impact - About";
