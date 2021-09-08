@@ -1,7 +1,15 @@
 {% extends "base.html" %} {% block content %}
 <div class="login-container align-self-center m-auto">
-  <p class="text-muted text-center">WELCOME BACK</p>
-  <h3 class="text-dark">Login with your email and password</h3>
+  <p class="text-center login-subtitle">WELCOME BACK</p>
+  <a
+    style="display: block"
+    class="navbar-brand font-weight-bold logo-text text-center login-logo"
+    href="/"
+    style="color: #000000"
+  >
+    Impact<span>.</span></a
+  >
+  <h3 class="login-text">Login with your email and password</h3>
   {% with messages = get_flashed_messages(category_filter=["success"]) %} {% if
   messages %}
   <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -31,7 +39,7 @@
     </div>
     <div class="form-group">{{form.submit(class='btn btn-light')}}</div>
   </form>
-  <p class="text-muted">
+  <p class="login-text">
     If you don't have an account you can
     <a class="text-warning" href="/register">register here!</a>
   </p>

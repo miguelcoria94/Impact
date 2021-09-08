@@ -105,11 +105,17 @@ nav {
   color: #afbbcc !important;
 }
 
-.logo-text {
+.login-logo {
   font-size: 25px !important;
   font-weight: 800 !important;
   color: black !important;
   font-weight: 700 !important;
+  position: relative;
+  bottom: 1rem;
+}
+
+.login-subtitle {
+  font-size: 0.7rem;
 }
 
 .form-div {
@@ -134,6 +140,27 @@ textarea {
   border: 1px solid #efefef;
   width: 450px;
   height: 500px;
+}
+
+.login-subtitle {
+  font-size: 0.8rem !important;
+  font-weight: bold !important;
+  color: #8b949e !important;
+}
+
+.login-logo {
+  font-size: 3rem !important;
+  margin: 0rem !important;
+}
+
+.login-logo span {
+  color: #fdc500;
+}
+
+.login-text {
+  font-size: 0.8rem !important;
+  color: black !important;
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 863px) {
