@@ -37,7 +37,7 @@ nav {
 }
 
 .nav-link:hover {
-  color: black !important;
+  color: #49494d !important;
 }
 
 .nav-icon {
@@ -64,6 +64,12 @@ nav {
   color: #fdc500 !important;
 }
 
+.logo-text {
+  color: #49494d !important;
+  font-weight: 800 !important;
+  font-size: 1.4rem !important;
+}
+
 .nav-brand-logo {
   stroke: #fdc500;
 }
@@ -84,7 +90,7 @@ nav {
   font-weight: 800;
   text-align: center;
   margin-bottom: 1.5rem;
-  color: black;
+  color: #49494d;
 }
 
 .home-header-subtitle {
@@ -106,7 +112,7 @@ nav {
 .login-logo {
   font-size: 25px !important;
   font-weight: 800 !important;
-  color: black !important;
+  color: #49494d !important;
   font-weight: 700 !important;
   position: relative;
   bottom: 1rem;
@@ -141,7 +147,7 @@ textarea {
 }
 
 .login-subtitle {
-  font-size: 0.8rem !important;
+  font-size: 0.7rem !important;
   font-weight: bold !important;
   color: #8b949e !important;
 }
@@ -156,12 +162,23 @@ textarea {
 }
 
 .login-text {
-  font-size: 0.9rem !important;
-  color: black !important;
+  font-size: 0.7rem !important;
+  color: #8b949e !important;
 }
 
 .login-form-inputs {
   padding: 1rem 0rem;
+}
+
+.login-label {
+  font-size: 0.8rem !important;
+  color: #49494d !important;
+  font-weight: bold;
+}
+
+.login-input {
+  color: #49494d !important;
+  font-size: 0.8rem !important;
 }
 
 /* footer */

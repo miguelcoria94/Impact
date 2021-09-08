@@ -25,7 +25,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -44,10 +44,7 @@
   </head>
   <body style="background-color: #ffffff">
     <nav class="navbar navbar-expand-md navbar-light">
-      <a
-        class="navbar-brand font-weight-bold logo-text"
-        href="/"
-        style="color: #000000"
+      <a class="navbar-brand font-weight-bold logo-text" href="/"
         ><img
           src="{{ url_for('static', filename='images/teamwork.png') }}"
           alt=""
@@ -113,7 +110,7 @@
       </div>
     </nav>
 
-    <div class="container-fluid main-content d-flex">
+    <div class="container-fluid main-content d-flex flex-column">
       {% block content %} {% endblock%}
     </div>
     <footer class="text-center text-lg-start container fluid">
@@ -193,6 +190,10 @@
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
       feather.replace();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
