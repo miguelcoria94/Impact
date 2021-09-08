@@ -30,7 +30,7 @@ nav {
 }
 
 .nav-item {
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 .nav-link {
@@ -48,7 +48,7 @@ nav {
 .nav-icon {
   height: 1rem !important;
   width: 1rem !important;
-  stroke: #fdc500;
+  stroke: #ffffff;
   margin-left: 0.2rem;
 }
 
@@ -57,19 +57,23 @@ nav {
 }
 
 .nav-login-button:hover {
-  color: #fdc500 !important;
+  color: #fff !important;
 }
 
 .navbar-light .navbar-nav .active .nav-link > .nav-icon {
-  stroke: #fdc500;
+  stroke: #ffffff !important;
+}
+
+.navbar-light .navbar-nav .active > .nav-login-button {
+  color: #ffffff !important;
 }
 
 .nav-login-button {
-  background-color: #fff7e3 !important;
-  color: #fdc500 !important;
+  background-color: #fdc500 !important;
+  color: #ffffff !important;
   padding-right: 2rem !important;
   padding-left: 2rem !important;
-  border: 1px solid #fdc500;
+  border-radius: 0.2rem;
 }
 
 .logo-text {
@@ -85,7 +89,7 @@ nav {
 /* homepage */
 
 .home-header {
-  padding: 6rem 3rem;
+  padding: 7rem 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,6 +150,7 @@ textarea {
   padding: 3rem !important;
   width: 500px;
   min-height: 500px;
+  border-radius: 0.2rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
@@ -190,7 +195,7 @@ textarea {
   font-weight: bold;
   color: #ffffff !important;
   background-color: #fdc500 !important;
-  border-radius: 0rem !important;
+  border-radius: 0.2rem !important;
   padding-left: 2rem !important;
   padding-right: 2rem !important;
 }
