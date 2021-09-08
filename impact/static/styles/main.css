@@ -4,7 +4,6 @@
 
 body {
   font-family: "Open Sans", sans-serif !important;
-  background-color: #f2f5ff;
 }
 
 .main-content {
@@ -62,7 +61,6 @@ nav {
 
 .nav-login-button {
   background-color: #fff7e3 !important;
-  border-radius: 10px !important;
   color: #fdc500 !important;
 }
 
@@ -135,11 +133,11 @@ textarea {
 /* login and register styles */
 
 .login-container {
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #efefef;
-  width: 450px;
-  height: 500px;
+  padding: 3rem !important;
+  width: 500px;
+  min-height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .login-subtitle {
@@ -160,7 +158,10 @@ textarea {
 .login-text {
   font-size: 0.8rem !important;
   color: black !important;
-  margin-bottom: 1rem;
+}
+
+.login-form-inputs {
+  padding: 1rem 0rem;
 }
 
 @media only screen and (max-width: 863px) {
