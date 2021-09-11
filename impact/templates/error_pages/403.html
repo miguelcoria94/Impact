@@ -1,10 +1,26 @@
-{% extends "base.html"%}
-{%block content%}
-<div class="container p-3 rounded border-info" >
-    <div class="text-center">
-        <img class="img-fluid" src="static/images/404-hand.png" width="550">
-    </div>
-    <h1 class="text-center">Access Forbidden!</h1>
-    <p class="text-center">The link may be broken, or the page may have been removed. Check to see if the link you're trying to open is correct.</p>
+{% extends "base.html"%} {%block content%}
+<div
+  class="
+    container
+    p-3
+    rounded
+    border-info
+    d-flex
+    justify-content-center
+    flex-column
+    align-items-center
+    m-auto
+  "
+>
+  <div class="text-center">
+    <img class="img-fluid" src="static/images/404-hand.png" width="550" />
+  </div>
+  <h1 class="text-center">Access Forbidden!</h1>
+  <p class="text-center">
+    <small
+      >The link may be broken, or the page may have been removed. Check to see
+      if the link you're trying to open is correct.</small
+    >
+  </p>
 </div>
 {% endblock%}
