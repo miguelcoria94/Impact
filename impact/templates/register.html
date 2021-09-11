@@ -12,16 +12,16 @@
   >
     Impact<span>.</span></a
   >
-  <h3 class="login-text">Fill out the form below to get started</h3>
   {% with errors = get_flashed_messages(category_filter=["error"]) %} {% if
   errors %}
   <div class="alert alert-danger alert-dismissible fade show">
-    {%- for msg in errors %} {{ msg }} {% endfor -%}
+    <small> {%- for msg in errors %} {{ msg }} {% endfor -%} </small>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   {% endif %} {% endwith %}
+  <h3 class="login-text">Fill out the form below to get started</h3>
   <form method="POST" class="">
     {{form.hidden_tag()}}
     <div class="form-group">
