@@ -4,6 +4,7 @@ from impact import db
 from impact.models import User, Post
 from impact.users.forms import RegisterForm, LoginForm, UpdateUserForm
 from impact.users.picture_handler import add_profile_pic
+import re
 
 users = Blueprint('users', __name__)
 
@@ -11,7 +12,7 @@ users = Blueprint('users', __name__)
 def register():
     form = RegisterForm()
 
-        
+    
 
     if form.validate_on_submit():
 
@@ -45,11 +46,32 @@ def register():
 def login():
 
     form = LoginForm()
+
+    # Make a regular expression
+    # for validating an Email
+    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+ 
+    # Define a function for
+    # for validating an Email
+ 
+ 
+    def check(email):
+ 
+    # pass the regular expression
+    # and the string into the fullmatch() method
+        if(re.fullmatch(regex, email)):
+            return True
+ 
+        else:
+            return False
+    
+    
+    
+
     if form.validate_on_submit():
 
         user = User.query.filter_by(email=form.email.data).first()
-
-
+        
         if user == None:
             flash(u'There was a problem finding your account!', 'error')
             return render_template('login.html', form=form)
