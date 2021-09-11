@@ -15,7 +15,6 @@ def register():
     
 
     if form.validate_on_submit():
-
         user = User(email=form.email.data,
                     username=form.username.data,
                     password=form.password.data)
@@ -25,7 +24,6 @@ def register():
         useremailcheck = User.query.filter_by(email=form.email.data).first()
         usernamecheck = User.query.filter_by(username=form.username.data).first()
 
-        
         if useremailcheck != None:
             flash(u'The email you entered is already taken!', 'error')
             return render_template('register.html', form=form)
@@ -38,6 +36,8 @@ def register():
         db.session.commit()
         flash(u'Your account was successfully created!', 'success')
         return redirect(url_for('users.login'))
+    elif form.password.data != form.confirm_password.data:
+        flash(u'Passwords must match!', 'error')
 
     return render_template('register.html', form=form)
 
