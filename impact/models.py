@@ -37,6 +37,7 @@ class Post(db.Model):
     users = db.relationship(User)
 
     id = db.Column(db.Integer, primary_key=True)
+    post_image = db.Column(db.String(64), nullable=False, default='default_thumb.png')
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     title = db.Column(db.String(140), nullable=False)
