@@ -3,6 +3,7 @@ from flask_login import current_user, login_required
 from impact import db
 from impact.models import Post
 from impact.posts.forms import PostForm
+from impact.posts.post_picture_handler import add_post_image
 
 blog_posts = Blueprint('blog_post', __name__)
 
