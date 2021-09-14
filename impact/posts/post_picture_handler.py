@@ -5,7 +5,7 @@ from flask import url_for, current_app
 from PIL import Image
 
 
-def add_post_image(pic_upload, posttile):
+def add_post_image(pic_upload, posttitle):
 
     filename = pic_upload.filename
     # Grab extension type .jpg or .png

@@ -3,7 +3,7 @@
   <h1>{{ post.title }}</h1>
   <p class="text-muted">By {{post.author.username}}</p>
   <img
-    src="{{url_for('static',filename='post_pics/default-thumb.png')}}"
+    src="{{url_for('static',filename='post_pics/'+post.post_image)}}"
     alt=""
   />
   <p class="text-muted">Posted on {{ post.date.strftime('%B %d, %Y') }}</p>

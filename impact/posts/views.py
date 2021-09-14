@@ -13,7 +13,10 @@ def create_post():
     form = PostForm()
 
     if form.validate_on_submit():
-        blog_post = Post(title=form.title.data, text=form.text.data, user_id=current_user.id)
+        title = form.title.data
+        pic = form.post_image.data
+        post_pic = add_post_image(pic, title)
+        blog_post = Post(title=form.title.data, text=form.text.data, user_id=current_user.id, post_image=post_pic)
 
         db.session.add(blog_post)
         db.session.commit()

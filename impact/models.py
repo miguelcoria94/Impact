@@ -43,10 +43,11 @@ class Post(db.Model):
     title = db.Column(db.String(140), nullable=False)
     text = db.Column(db.Text, nullable=False)
 
-    def __init__(self, title, text, user_id):
+    def __init__(self, title, text, user_id, post_image):
         self.title = title
         self.text = text
         self.user_id = user_id
+        self.post_image = post_image
 
     def __repr__(self):
         return f"Post ID: {self.id} -- Date: {self.date} --- {self.title}"
