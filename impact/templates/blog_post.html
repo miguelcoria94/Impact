@@ -1,11 +1,14 @@
 {% extends "base.html" %} {% block content %}
-<div class="jumbotron">
+<div class="post-page-wrapper">
+  <div class="post-image-div">
+    <img
+      src="{{url_for('static',filename='post_pics/'+post.post_image)}}"
+      alt=""
+      class="post-image"
+    />
+  </div>
   <h1>{{ post.title }}</h1>
   <p class="text-muted">By {{post.author.username}}</p>
-  <img
-    src="{{url_for('static',filename='post_pics/'+post.post_image)}}"
-    alt=""
-  />
   <p class="text-muted">Posted on {{ post.date.strftime('%B %d, %Y') }}</p>
   <p>{{post.text}}</p>
   {% if post.author == current_user %}
