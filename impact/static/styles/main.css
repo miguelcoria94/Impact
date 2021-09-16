@@ -76,6 +76,10 @@ nav {
   border-radius: 0.2rem;
 }
 
+.nav-login-button:hover {
+  background-color: #e0b61c !important;
+}
+
 .logo-text {
   color: #3c3c3f !important;
   font-weight: 800 !important;
@@ -206,6 +210,10 @@ textarea {
   border-radius: 0.2rem !important;
   padding-left: 2rem !important;
   padding-right: 2rem !important;
+}
+
+.login-submit:hover {
+  background-color: #e0b61c !important;
 }
 
 /* footer */
@@ -393,11 +401,12 @@ textarea {
 
 .latest-post-button:hover {
   text-decoration: none;
+  background-color: #e0b61c !important;
 }
 
 .latest-post-link:hover {
   text-decoration: none;
-  color: #3c3c3f !important;
+  color: #5a5a61 !important;
 }
 
 .latest-post-date {
