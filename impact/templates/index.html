@@ -50,24 +50,29 @@
     </div>
   </div>
 </div>
-<div>
+<div class="container-fluid posts-div">
   <div>
-      <h1 class="newest-post-title">Most Recent Posts</h1>
+    <h6 class="latest-post-subtitle">Most Recent Posts</h6>
+      <h1 class="latest-post-title">Check out what's new</h1>
         {# Go through each blog post #}
+        <div class="posts-grid">
         {% for post in blog_posts.items %}
-        <div class="card w-100 mb-4">
-          <div class="card-body">
+            <div class="post-card">
+
+              <h2><a class="" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
+              <div class="post-details-div">
+
+                <img class="author-profile-image" align='center' src="{{url_for('static',filename='profile_pics/'+post.author.profile_image)}}" width="30">
+                <a href="{{ url_for('users.user_posts', username=post.author.username) }}" class="post-details-highlight latest-post-link latest-post-author">{{post.author.username}}</a>
+                <span class="post-details-highlight latest-post-date">{{ post.date.strftime('%B %d, %Y') }}</span>
+              </div>
+              <p class="card-text text-dark">{{ post.text[:100] }}...</p>
+              <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn btn-secondary">Continue Reading <i class="fas fa-arrow-right"></i></a>
+            </div>
+          
             
-            <h2><a class="card-title text-dark" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
-            By <a class="text-muted" href="{{ url_for('users.user_posts', username=post.author.username) }}"> <span class="text-warning">{{post.author.username}}</span></a>
-            <img class=" card-image" align='center' src="{{url_for('static',filename='profile_pics/'+post.author.profile_image)}}" width="30">
-            <p class="text-muted">Posted on: {{ post.date.strftime('%Y-%m-%d') }}</p>
-            <p class="card-text text-dark">{{ post.text[:100] }}...</p>
-            <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn btn-secondary">Continue Reading <i class="fas fa-arrow-right"></i></a>
+            {% endfor %}
           </div>
-        </div>
-    
-       {% endfor %}
     </div>
        <nav aria-label="Page navigation example" class="mt-2">
          <ul class="pagination justify-content-center">

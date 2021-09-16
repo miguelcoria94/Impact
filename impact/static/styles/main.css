@@ -424,6 +424,27 @@ textarea {
   color: #5a5a61 !important;
 }
 
+/* all post grid */
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 0rem 0rem;
+  overflow: hidden;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem;
+}
+
+.posts-div {
+  padding: 3rem 4.5rem;
+}
+
+.post-card {
+}
+
 @media only screen and (max-width: 1250px) {
   .home-grid {
     grid-template-columns: 40% 60%;
