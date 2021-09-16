@@ -242,12 +242,56 @@ textarea {
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 0rem 3rem;
 }
 
 .post-image {
-  width: 80%;
-  height: auto;
+  width: 100%;
   border-radius: 10px;
+  height: auto;
+}
+
+.post-title {
+  font-weight: 800;
+  color: #49494d;
+}
+
+.post-details-div {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.post-details {
+  color: #8b949e;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 3px;
+}
+
+.post-details-highlight {
+  color: #f673a2;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 3px;
+}
+
+.author-profile-image {
+  height: 25px;
+  width: auto;
+  padding: 3px;
+}
+
+.post-text {
+  align-self: flex-start;
+  padding: 0rem 3rem;
 }
 
 @media only screen and (max-width: 863px) {

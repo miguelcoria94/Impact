@@ -1,5 +1,19 @@
 {% extends "base.html" %} {% block content %}
-<div class="post-page-wrapper">
+<div class="container post-page-wrapper">
+  <h1 class="post-title">{{ post.title }}</h1>
+  <div class="post-details-div">
+    <span class="post-details">posted by</span>
+    <img
+      src="{{url_for('static', filename='profile_pics/'+ post.author.profile_image)}}"
+      alt=""
+      class="author-profile-image"
+    />
+    <span class="post-details-highlight">{{post.author.username}}</span>
+    <span class="post-details">on</span>
+    <span class="post-details-highlight">
+      {{ post.date.strftime('%B %d, %Y') }}</span
+    >
+  </div>
   <div class="post-image-div">
     <img
       src="{{url_for('static',filename='post_pics/'+post.post_image)}}"
@@ -7,10 +21,7 @@
       class="post-image"
     />
   </div>
-  <h1>{{ post.title }}</h1>
-  <p class="text-muted">By {{post.author.username}}</p>
-  <p class="text-muted">Posted on {{ post.date.strftime('%B %d, %Y') }}</p>
-  <p>{{post.text}}</p>
+  <p class="post-text">{{post.text}}</p>
   {% if post.author == current_user %}
   <div>
     <a
