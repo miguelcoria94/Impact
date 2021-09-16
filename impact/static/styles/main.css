@@ -292,6 +292,9 @@ textarea {
 .post-text {
   align-self: flex-start;
   padding: 0rem 3rem;
+  font-size: 0.8rem;
+  color: #49494d;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width: 863px) {
@@ -359,6 +362,30 @@ textarea {
 
   .main-content {
     min-height: 80%;
+  }
+
+  .post-text {
+    padding: 0rem 0rem;
+  }
+
+  .post-image-div {
+    padding: 0rem 0rem;
+  }
+
+  .post-page-wrapper {
+    padding: 2rem 0rem;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+
+  .post-details-div {
+    margin-bottom: 1rem;
+  }
+
+  .post-image-div {
+    margin-bottom: 1rem;
   }
 }
 
