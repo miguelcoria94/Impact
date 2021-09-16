@@ -303,9 +303,10 @@ textarea {
 }
 
 .author-profile-image {
-  height: 25px;
+  height: 30px;
   width: auto;
   padding: 3px;
+  border-radius: 50%;
 }
 
 .post-text {
