@@ -442,11 +442,20 @@ textarea {
   min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
+    rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+  border-radius: 10px;
 }
 
 .posts-div {
   padding: 3rem 4.5rem;
+}
+
+.post-card-image {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: 1px solid rgb(27 31 35 / 15%);
+  min-height: 280px;
 }
 
 a.post-card-title {
@@ -460,12 +469,17 @@ a.post-card-title:hover {
 }
 
 .posts-card-details {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0rem !important;
   align-self: flex-start !important;
+  padding: 0rem;
+}
+
+.post-card-content {
+  padding: 1rem;
 }
 
 .post-card-image-div {
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
 }
 
 .post-card-title {

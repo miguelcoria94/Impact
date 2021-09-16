@@ -59,9 +59,9 @@
         {% for post in blog_posts.items %}
             <div class="post-card">
               <div class="post-card-image-div">
-      <img src="{{url_for('static', filename='post_pics/'+latest_post.post_image)}}" alt="" class="latest-post-image">
+      <img src="{{url_for('static', filename='post_pics/'+post.post_image)}}" alt="" class="latest-post-image post-card-image">
     </div>
-              <div>
+              <div class="post-card-content">
 
                 <div class="post-details-div posts-card-details">
                   
@@ -71,12 +71,12 @@
                 </div>
                 <a class="post-card-title" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a>
                 <p class="post-card-text">{{ post.text[:100] }}...</p>
+                <div>
+                  <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn latest-post-button p-2">Read Now</a>
+  
+                </div>
               </div>
 
-              <div>
-                <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn latest-post-button p-2">Read Now</a>
-
-              </div>
             </div>
           
             
