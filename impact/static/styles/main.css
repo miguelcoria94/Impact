@@ -88,6 +88,14 @@ nav {
 
 /* homepage */
 
+.home-header-highlight {
+  color: #f673a2;
+  font-weight: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
 .home-header {
   padding: 7rem 3rem;
   display: flex;
@@ -342,6 +350,12 @@ textarea {
   overflow: hidden;
 }
 
+.latest-post-text-div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 .latest-post-text {
   font-size: 0.8rem;
   color: #8b949e;
@@ -367,6 +381,12 @@ textarea {
   padding-right: 2rem !important;
   padding-left: 2rem !important;
   border-radius: 0.2rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.latest-post-button:hover {
+  text-decoration: none;
 }
 @media only screen and (max-width: 863px) {
   .home-header-title {

@@ -27,7 +27,7 @@
   </div>
   <div class="latest-post-right">
     <div>
-      <h6 class="latest-post-subtitle">Latest Post</h6>
+      <h6 class="latest-post-subtitle"><i class="far fa-newspaper"></i> Latest Post</h6>
       <h1 class="latest-post-title">{{latest_post.title}}</h1>
       <div class="post-details-div" data-aos="fade-in" data-aos-duration="700">
       <span class="post-details">posted by</span>
@@ -44,7 +44,10 @@
         {{ latest_post.date.strftime('%B %d, %Y') }}</span
       >
     </div>
-    <p class="latest-post-text">{{latest_post.text}}</p>
+    <div class="latest-post-text-div">
+
+      <p class="latest-post-text">{{latest_post.text}}</p>
+    </div>
     <a href="" class="latest-post-button p-2">Read Now</a>
     </div>
     </div>
