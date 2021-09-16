@@ -59,7 +59,7 @@
         {% for post in blog_posts.items %}
             <div class="post-card">
 
-              <h2><a class="" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
+              <h3><a class="post-card-title" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h3>
               <div class="post-details-div">
 
                 <img class="author-profile-image" align='center' src="{{url_for('static',filename='profile_pics/'+post.author.profile_image)}}" width="30">
