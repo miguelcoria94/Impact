@@ -10,7 +10,7 @@
       alt=""
       class="author-profile-image"
     />
-    <a href="">
+    <a href="{{ url_for('users.user_posts', username=post.author.username) }}">
       <span class="post-details-highlight">{{post.author.username}}</span>
     </a>
     <span class="post-details">on</span>
