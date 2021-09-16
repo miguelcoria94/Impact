@@ -266,8 +266,8 @@ textarea {
 }
 
 .post-details {
-  color: #8b949e;
-  font-weight: 400;
+  color: #49494d;
+  font-weight: 600;
   display: inline-block;
   font-size: 0.8rem;
   text-align: center;
@@ -276,7 +276,7 @@ textarea {
 
 .post-details-highlight {
   color: #f673a2;
-  font-weight: 400;
+  font-weight: 600;
   display: inline-block;
   font-size: 0.8rem;
   text-align: center;
@@ -293,10 +293,65 @@ textarea {
   align-self: flex-start;
   padding: 0rem 3rem;
   font-size: 0.8rem;
-  color: #49494d;
-  line-height: 1.5;
+  color: #8b949e;
+  line-height: 2;
+  font-weight: 500;
 }
 
+/* home layout */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 0rem 4rem;
+  overflow: hidden;
+}
+
+.latest-post-subtitle {
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #f673a2;
+}
+
+.latest-post-title {
+  font-weight: 800;
+  color: #49494d;
+}
+
+.latest-post-image-div {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.latest-post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.latest-post-left {
+  overflow: hidden;
+}
+
+.latest-post-text {
+  font-size: 0.8rem;
+  color: #8b949e;
+  line-height: 2;
+  font-weight: 500;
+}
+
+.latest-post-right {
+  padding: 2rem 0rem;
+}
 @media only screen and (max-width: 863px) {
   .home-header-title {
     font-size: 3rem;

@@ -18,36 +18,65 @@
   <span class="home-header-subtitle" data-aos="fade-in"
   data-aos-duration="1000">Impact is a place where you can share the stories that have had the most influence on your life.</span>
 </div>
-<div>{{'blog_post.items[0]'}}</div>
-<div>
-  <h1 class="text-dark fs-1 font-weight-bold">Most Recent Posts</h1>
-    {# Go through each blog post #}
-    {% for post in blog_posts.items %}
-    <div class="card w-100 mb-4">
-      <div class="card-body">
-        
-        <h2><a class="card-title text-dark" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
-        By <a class="text-muted" href="{{ url_for('users.user_posts', username=post.author.username) }}"> <span class="text-warning">{{post.author.username}}</span></a>
-        <img class=" card-image" align='center' src="{{url_for('static',filename='profile_pics/'+post.author.profile_image)}}" width="30">
-        <p class="text-muted">Posted on: {{ post.date.strftime('%Y-%m-%d') }}</p>
-        <p class="card-text text-dark">{{ post.text[:100] }}...</p>
-        <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn btn-secondary">Continue Reading <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
+<div class="home-grid">
 
-   {% endfor %}
+  <div class="latest-post-left">
+    <div class="latest-post-image-div">
+      <img src="{{url_for('static', filename='post_pics/'+latest_post.post_image)}}" alt="" class="latest-post-image">
+    </div>
+  </div>
+  <div class="latest-post-right">
+    <h6 class="latest-post-subtitle">Latest Post</h6>
+    <h1 class="latest-post-title">{{latest_post.title}}</h1>
+    <div class="post-details-div" data-aos="fade-in" data-aos-duration="700">
+    <span class="post-details">posted by</span>
+    <img
+      src="{{url_for('static', filename='profile_pics/'+ latest_post.author.profile_image)}}"
+      alt=""
+      class="author-profile-image"
+    />
+    <a href="">
+      <span class="post-details-highlight">{{latest_post.author.username}}</span>
+    </a>
+    <span class="post-details">on</span>
+    <span class="post-details-highlight">
+      {{ latest_post.date.strftime('%B %d, %Y') }}</span
+    >
+  </div>
+  <p class="latest-post-text">{{latest_post.text}}</p>
+  </div>
 </div>
-   <nav aria-label="Page navigation example" class="mt-2">
-     <ul class="pagination justify-content-center">
-       {% for page_num in blog_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-          {% if blog_posts.page == page_num %}
-          <li class="page-item disabled">
-            <a class="page-link" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
-          </li>
-          {% else %}
-            <li class="page-item"><a class="page-link text-dark" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
-          {% endif %}
-      {% endfor %}
-    </nav>
+<div>
+  <div>
+      <h1 class="newest-post-title">Most Recent Posts</h1>
+        {# Go through each blog post #}
+        {% for post in blog_posts.items %}
+        <div class="card w-100 mb-4">
+          <div class="card-body">
+            
+            <h2><a class="card-title text-dark" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
+            By <a class="text-muted" href="{{ url_for('users.user_posts', username=post.author.username) }}"> <span class="text-warning">{{post.author.username}}</span></a>
+            <img class=" card-image" align='center' src="{{url_for('static',filename='profile_pics/'+post.author.profile_image)}}" width="30">
+            <p class="text-muted">Posted on: {{ post.date.strftime('%Y-%m-%d') }}</p>
+            <p class="card-text text-dark">{{ post.text[:100] }}...</p>
+            <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn btn-secondary">Continue Reading <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+    
+       {% endfor %}
+    </div>
+       <nav aria-label="Page navigation example" class="mt-2">
+         <ul class="pagination justify-content-center">
+           {% for page_num in blog_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+              {% if blog_posts.page == page_num %}
+              <li class="page-item disabled">
+                <a class="page-link" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
+              </li>
+              {% else %}
+                <li class="page-item"><a class="page-link text-dark" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
+              {% endif %}
+          {% endfor %}
+        </nav>
+</div>
 
 {% endblock %}
