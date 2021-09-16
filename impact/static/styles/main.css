@@ -33,6 +33,10 @@ nav {
   padding-left: 1rem;
 }
 
+.navbar-logo-highlight {
+  color: #fdc500;
+}
+
 .nav-link {
   font-size: 0.8rem !important;
   font-weight: bold !important;
