@@ -351,6 +351,7 @@ textarea {
 
 .latest-post-left {
   overflow: hidden;
+  height: 100%;
 }
 
 .latest-post-text-div {
@@ -376,6 +377,7 @@ textarea {
   flex-direction: column;
   justify-content: space-around;
   padding: 2rem 0rem;
+  height: 100%;
 }
 
 .latest-post-button {
