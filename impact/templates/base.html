@@ -94,7 +94,9 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link p-2" href="{{url_for('core.about')}}">About</a>
+            <a class="nav-link p-2" href="{{url_for('core.development')}}"
+              >Development</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link p-2" href="{{ url_for('users.logout')}}"
@@ -103,7 +105,9 @@
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link p-2" href="{{url_for('core.about')}}">About</a>
+            <a class="nav-link p-2" href="{{url_for('core.development')}}"
+              >Development</a
+            >
           </li>
 
           <li class="nav-item">
@@ -173,7 +177,14 @@
     ></script>
     <script>
       let pathname = window.location.pathname;
-      pages = ["/", "/about", "/register", "/account", "/login", "/create"];
+      pages = [
+        "/",
+        "/development",
+        "/register",
+        "/account",
+        "/login",
+        "/create",
+      ];
 
       $(document).ready(function () {
         $("li.active").removeClass("active");
@@ -181,8 +192,8 @@
           .closest("li")
           .addClass("active");
         switch (pathname) {
-          case "/about":
-            document.title = "Impact - About";
+          case "/development":
+            document.title = "Impact - Development";
             break;
           case "/register":
             document.title = "Impact - Register";

@@ -10,6 +10,6 @@ def index():
     latest_post = Post.query.order_by(Post.date.desc()).first()
     return render_template('index.html', blog_posts=blog_posts, latest_post=latest_post)
 
-@core.route('/about')
-def about():
-    return render_template('about.html')
+@core.route('/development')
+def development():
+    return render_template('development.html')
