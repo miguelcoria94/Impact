@@ -325,7 +325,7 @@ textarea {
   overflow: hidden;
   width: 100%;
   border-radius: 10px;
-  height: 400px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -347,10 +347,26 @@ textarea {
   color: #8b949e;
   line-height: 2;
   font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 3rem;
 }
 
 .latest-post-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 2rem 0rem;
+}
+
+.latest-post-button {
+  background-color: #fdc500 !important;
+  color: #ffffff !important;
+  padding-right: 2rem !important;
+  padding-left: 2rem !important;
+  border-radius: 0.2rem;
 }
 @media only screen and (max-width: 863px) {
   .home-header-title {

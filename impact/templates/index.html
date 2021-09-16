@@ -26,24 +26,28 @@
     </div>
   </div>
   <div class="latest-post-right">
-    <h6 class="latest-post-subtitle">Latest Post</h6>
-    <h1 class="latest-post-title">{{latest_post.title}}</h1>
-    <div class="post-details-div" data-aos="fade-in" data-aos-duration="700">
-    <span class="post-details">posted by</span>
-    <img
-      src="{{url_for('static', filename='profile_pics/'+ latest_post.author.profile_image)}}"
-      alt=""
-      class="author-profile-image"
-    />
-    <a href="">
-      <span class="post-details-highlight">{{latest_post.author.username}}</span>
-    </a>
-    <span class="post-details">on</span>
-    <span class="post-details-highlight">
-      {{ latest_post.date.strftime('%B %d, %Y') }}</span
-    >
-  </div>
-  <p class="latest-post-text">{{latest_post.text}}</p>
+    <div>
+      <h6 class="latest-post-subtitle">Latest Post</h6>
+      <h1 class="latest-post-title">{{latest_post.title}}</h1>
+      <div class="post-details-div" data-aos="fade-in" data-aos-duration="700">
+      <span class="post-details">posted by</span>
+      <img
+        src="{{url_for('static', filename='profile_pics/'+ latest_post.author.profile_image)}}"
+        alt=""
+        class="author-profile-image"
+      />
+      <a href="">
+        <span class="post-details-highlight">{{latest_post.author.username}}</span>
+      </a>
+      <span class="post-details">on</span>
+      <span class="post-details-highlight">
+        {{ latest_post.date.strftime('%B %d, %Y') }}</span
+      >
+    </div>
+    <p class="latest-post-text">{{latest_post.text}}</p>
+    <a href="" class="latest-post-button p-2">Read Now</a>
+    </div>
+    </div>
   </div>
 </div>
 <div>
