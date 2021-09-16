@@ -58,17 +58,23 @@
         <div class="posts-grid">
         {% for post in blog_posts.items %}
             <div class="post-card">
-
-              <div class="post-details-div posts-card-details">
-                
-                <img class="author-profile-image" align='center' src="{{url_for('static',filename='profile_pics/'+post.author.profile_image)}}" width="30">
-                <a href="{{ url_for('users.user_posts', username=post.author.username) }}" class="post-details-highlight latest-post-link latest-post-author">{{post.author.username}}</a>
-                <span class="post-details-highlight latest-post-date">{{ post.date.strftime('%B %d, %Y') }}</span>
-              </div>
-              <a class="post-card-title" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a>
-              <p class="card-text text-dark">{{ post.text[:100] }}...</p>
+              <div class="post-card-image-div">
+      <img src="{{url_for('static', filename='post_pics/'+latest_post.post_image)}}" alt="" class="latest-post-image">
+    </div>
               <div>
-                <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn latest-post-button p-2">Continue Reading <i class="fas fa-arrow-right"></i></a>
+
+                <div class="post-details-div posts-card-details">
+                  
+                  <img class="author-profile-image" align='center' src="{{url_for('static',filename='profile_pics/'+post.author.profile_image)}}" width="30">
+                  <a href="{{ url_for('users.user_posts', username=post.author.username) }}" class="post-details-highlight latest-post-link latest-post-author">{{post.author.username}}</a>
+                  <span class="post-details-highlight latest-post-date">{{ post.date.strftime('%B %d, %Y') }}</span>
+                </div>
+                <a class="post-card-title" href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a>
+                <p class="post-card-text">{{ post.text[:100] }}...</p>
+              </div>
+
+              <div>
+                <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn latest-post-button p-2">Read Now</a>
 
               </div>
             </div>

@@ -6,7 +6,7 @@ core = Blueprint('core', __name__)
 @core.route('/')
 def index():
     page = request.args.get('page', 1, type=int)
-    blog_posts = Post.query.order_by(Post.date.desc()).paginate(page=page,per_page=3)
+    blog_posts = Post.query.order_by(Post.date.desc()).paginate(page=page,per_page=4)
     latest_post = Post.query.order_by(Post.date.desc()).first()
     return render_template('index.html', blog_posts=blog_posts, latest_post=latest_post)
 

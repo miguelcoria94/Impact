@@ -428,9 +428,9 @@ textarea {
 
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 1fr;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   margin-bottom: 3rem;
   padding: 0rem 0rem;
   overflow: hidden;
@@ -460,7 +460,22 @@ a.post-card-title:hover {
 }
 
 .posts-card-details {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
+  align-self: flex-start !important;
+}
+
+.post-card-image-div {
+  padding-bottom: 1rem;
+}
+
+.post-card-title {
+  padding-bottom: 2rem !important;
+  color: #49494d !important;
+}
+
+.post-card-text {
+  color: #8b949e;
+  font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 1250px) {
