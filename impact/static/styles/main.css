@@ -432,7 +432,7 @@ textarea {
   grid-auto-rows: 1fr;
   grid-gap: 3rem;
   margin-bottom: 3rem;
-  padding: 0rem 0rem;
+  padding: 0rem 1rem;
   overflow: hidden;
   padding-top: 2rem !important;
   padding-bottom: 2rem;
@@ -445,17 +445,20 @@ textarea {
   box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
     rgb(27 31 35 / 15%) 0px 0px 0px 1px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .posts-div {
-  padding: 3rem 4.5rem;
+  padding: 3rem 10rem;
 }
 
 .post-card-image {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  border-bottom: 1px solid rgb(27 31 35 / 15%);
-  min-height: 280px;
+  height: auto;
+  width: 130%;
+  box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px,
+    rgb(27 31 35 / 15%) 0px 0px 0px 1px;
 }
 
 a.post-card-title {
@@ -480,6 +483,9 @@ a.post-card-title:hover {
 
 .post-card-image-div {
   padding-bottom: 0rem;
+  overflow: hidden;
+  height: 220px;
+  border-bottom: 1px solid rgb(27 31 35 / 15%);
 }
 
 .post-card-title {
