@@ -1,7 +1,9 @@
 {% extends "base.html" %} {% block content %}
 <div class="container post-page-wrapper">
-  <h1 class="post-title">{{ post.title }}</h1>
-  <div class="post-details-div">
+  <h1 class="post-title" data-aos="fade-in" data-aos-duration="500">
+    {{ post.title }}
+  </h1>
+  <div class="post-details-div" data-aos="fade-in" data-aos-duration="700">
     <span class="post-details">posted by</span>
     <img
       src="{{url_for('static', filename='profile_pics/'+ post.author.profile_image)}}"
@@ -16,7 +18,7 @@
       {{ post.date.strftime('%B %d, %Y') }}</span
     >
   </div>
-  <div class="post-image-div">
+  <div class="post-image-div" data-aos="fade-in" data-aos-duration="500">
     <img
       src="{{url_for('static',filename='post_pics/'+post.post_image)}}"
       alt=""
