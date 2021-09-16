@@ -45,14 +45,15 @@
 
       <p class="latest-post-text">{{latest_post.text}}</p>
     </div>
-    <a href="{{ url_for('blog_post.blog_post', blog_post_id=latest_post.id) }}" class="latest-post-button p-2">Read Now</a>
+    <a href="{{ url_for('blog_post.blog_post', blog_post_id=latest_post.id) }}" class="latest-post-button p-2" data-aos="fade-in"
+    data-aos-duration="500">Read Now</a>
     </div>
     </div>
   </div>
 </div>
 <div class="container-fluid features-div">
     <h6 class="latest-post-subtitle features-subtitle">Features</h6>
-      <h1 class="latest-post-title">A simple beautiful blog</h1>
+      <h1 class="latest-post-title non-link-title">A simple beautiful blog</h1>
       <div class="feature-icons">
         <div>
 
@@ -76,12 +77,13 @@
           <span class="feature-text">Responsive Design</span>
         </div>
       </div>
-      <a href="{{ url_for('blog_post.blog_post', blog_post_id=latest_post.id) }}" class="latest-post-button p-2">Development Process</a>
+      <a href="{{ url_for('blog_post.blog_post', blog_post_id=latest_post.id) }}" class="latest-post-button p-2" data-aos="fade-in"
+    data-aos-duration="500">Development Process</a>
 </div>
 <div class="container-fluid posts-div">
   <div>
     <h6 class="latest-post-subtitle">Most Recent Posts</h6>
-      <h1 class="latest-post-title">Check out what's new</h1>
+      <h1 class="latest-post-title non-link-title">Check out what's new</h1>
         {# Go through each blog post #}
         <div class="posts-grid">
         {% for post in blog_posts.items %}
@@ -105,7 +107,8 @@
                   </div>
                 </div>
                 <div>
-                  <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn latest-post-button p-2">Read Now</a>
+                  <a href="{{ url_for('blog_post.blog_post', blog_post_id=post.id) }}" class="btn latest-post-button p-2" data-aos="fade-in"
+    data-aos-duration="500">Read Now</a>
   
                 </div>
               </div>
