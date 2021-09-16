@@ -438,11 +438,29 @@ textarea {
   padding-bottom: 2rem;
 }
 
+.post-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .posts-div {
   padding: 3rem 4.5rem;
 }
 
-.post-card {
+a.post-card-title {
+  font-size: 1.4rem !important;
+  color: #3c3c3f !important;
+  font-weight: 800 !important;
+}
+
+a.post-card-title:hover {
+  text-decoration: none !important;
+}
+
+.posts-card-details {
+  margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 1250px) {
