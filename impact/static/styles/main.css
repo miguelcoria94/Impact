@@ -275,7 +275,6 @@ textarea {
 
 .post-details {
   color: #49494d;
-  font-weight: bold;
   display: inline-block;
   font-size: 0.8rem;
   text-align: center;
@@ -283,12 +282,12 @@ textarea {
 }
 
 .post-details-highlight {
-  color: #fdc500;
-  font-weight: bold;
+  color: #3c3c3f;
   display: inline-block;
   font-size: 0.8rem;
   text-align: center;
   padding: 3px;
+  font-weight: bold;
 }
 
 .author-profile-image {
@@ -403,7 +402,7 @@ textarea {
 
 .latest-post-date {
   font-weight: 400;
-  color: #8b949e !important;
+  color: #fdc500 !important;
   font-size: 0.7rem;
 }
 
@@ -413,7 +412,7 @@ textarea {
 
 .latest-post-title:hover {
   text-decoration: none;
-  color: #49494d !important;
+  color: #5a5a61 !important;
 }
 
 @media only screen and (max-width: 1250px) {
