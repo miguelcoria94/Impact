@@ -317,6 +317,7 @@ textarea {
   padding: 0rem 4rem;
   overflow: hidden;
   padding-top: 2rem !important;
+  padding-bottom: 2rem;
 }
 
 .latest-post-subtitle {
@@ -453,6 +454,30 @@ textarea {
     font-size: 1.4rem;
   }
 
+  .post-title {
+    font-size: 1.4rem !important;
+  }
+
+  .post-details-div {
+    padding-bottom: 1rem;
+  }
+
+  .post-text {
+    margin-top: 1rem !important;
+  }
+
+  .post-details {
+    font-size: 0.7rem !important;
+  }
+
+  .post-details-highlight {
+    font-size: 0.7rem !important;
+  }
+
+  .post-text {
+    font-size: 0.7rem;
+  }
+
   .latest-post-subtitle {
     font-size: 0.7rem;
   }
@@ -579,5 +604,13 @@ textarea {
 
   .latest-post-right {
     padding: 1rem 0rem;
+  }
+
+  .post-details-div {
+    padding-bottom: 0rem;
+  }
+
+  .post-text {
+    margin-top: 0rem !important;
   }
 }
