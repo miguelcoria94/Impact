@@ -36,7 +36,7 @@ nav {
 .nav-link {
   font-size: 0.8rem !important;
   font-weight: bold !important;
-  color: #49494d !important;
+  color: #3c3c3f !important;
   display: flex;
   align-items: center;
 }
@@ -77,7 +77,7 @@ nav {
 }
 
 .logo-text {
-  color: #49494d !important;
+  color: #3c3c3f !important;
   font-weight: 800 !important;
   font-size: 1.4rem !important;
 }
@@ -110,11 +110,11 @@ nav {
   font-weight: 800;
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #49494d;
+  color: #3c3c3f;
 }
 
 .home-header-subtitle {
-  color: #8b949e;
+  color: #49494d;
   font-weight: bold;
   display: inline-block;
   font-size: 0.8rem;
@@ -274,7 +274,7 @@ textarea {
 }
 
 .post-details {
-  color: #666669;
+  color: #49494d;
   font-weight: bold;
   display: inline-block;
   font-size: 0.8rem;
@@ -283,7 +283,7 @@ textarea {
 }
 
 .post-details-highlight {
-  color: #f673a2;
+  color: #fdc500;
   font-weight: bold;
   display: inline-block;
   font-size: 0.8rem;
@@ -329,11 +329,7 @@ textarea {
 
 .latest-post-title {
   font-weight: 800;
-  color: #49494d;
-}
-
-.latest-post-title:hover {
-  text-decoration: none;
+  color: #3c3c3f;
 }
 
 .latest-post-image-div {
@@ -365,9 +361,9 @@ textarea {
 
 .latest-post-text {
   font-size: 0.8rem;
-  color: #8b949e;
+  color: #49494d;
   line-height: 2;
-  font-weight: 500;
+  font-weight: 600;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
@@ -403,12 +399,19 @@ textarea {
 
 .latest-post-date {
   font-weight: 400;
-  color: #fdc500 !important;
+  color: #8b949e !important;
+  font-size: 0.7rem;
 }
 
 .latest-post-author {
   color: #49494d !important;
 }
+
+.latest-post-title:hover {
+  text-decoration: none;
+  color: #49494d !important;
+}
+
 @media only screen and (max-width: 863px) {
   .home-header-title {
     font-size: 3rem;
