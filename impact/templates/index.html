@@ -50,6 +50,34 @@
     </div>
   </div>
 </div>
+<div class="container-fluid features-div">
+    <h6 class="latest-post-subtitle features-subtitle">Features</h6>
+      <h1 class="latest-post-title">A simple beautiful blog</h1>
+      <div class="feature-icons">
+        <div>
+
+          <i class="fas fa-code feature-icon"></i>
+          <span class="feature-text">Full-Stack Application</span>
+        </div>
+        <div>
+
+          <i class="fas fa-lock feature-icon"></i>
+          <span class="feature-text">User Authentication</span>
+        </div>
+  
+        <div>
+
+          <i class="fas fa-paper-plane feature-icon"></i>
+          <span class="feature-text">CRUD Operations</span>
+        </div>
+        <div>
+
+          <i class="fas fa-palette feature-icon"></i>
+          <span class="feature-text">Responsive Design</span>
+        </div>
+      </div>
+      <a href="{{ url_for('blog_post.blog_post', blog_post_id=latest_post.id) }}" class="latest-post-button p-2">Development Process</a>
+</div>
 <div class="container-fluid posts-div">
   <div>
     <h6 class="latest-post-subtitle">Most Recent Posts</h6>
