@@ -140,7 +140,7 @@ nav {
 .login-logo {
   font-size: 25px !important;
   font-weight: 800 !important;
-  color: #49494d !important;
+  color: #3c3c3f !important;
   font-weight: 700 !important;
   position: relative;
   bottom: 1rem;
@@ -174,7 +174,7 @@ textarea {
 .login-subtitle {
   font-size: 0.7rem !important;
   font-weight: bold !important;
-  color: #8b949e !important;
+  color: #49494d !important;
 }
 
 .login-logo {
@@ -188,7 +188,7 @@ textarea {
 
 .login-text {
   font-size: 0.7rem !important;
-  color: #8b949e !important;
+  color: #5a5a61 !important;
 }
 
 .login-form-inputs {
@@ -197,7 +197,7 @@ textarea {
 
 .login-label {
   font-size: 0.8rem !important;
-  color: #49494d !important;
+  color: #3c3c3f !important;
   font-weight: bold;
 }
 
@@ -225,7 +225,7 @@ textarea {
 .footer-link {
   font-weight: bold;
   font-size: 0.8rem;
-  color: #49494d;
+  color: #3c3c3f;
 }
 
 .footer-icon {
@@ -237,12 +237,12 @@ textarea {
 }
 
 .footer-legal-text {
-  color: #8b949e !important;
+  color: #5a5a61 !important;
   font-size: 0.7rem !important;
 }
 
 .footer-link:hover {
-  color: #8b949e !important;
+  color: #49494d !important;
   text-decoration: none !important;
 }
 
